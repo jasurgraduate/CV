@@ -1,0 +1,295 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+/* || RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* || GENERAL STYLES */
+body {
+  font: 1.5rem "Nunito", sans-serif;
+  min-height: 100vh;
+
+  background: linear-gradient(125deg, #ffffff, #eee7df);
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* Menu styles */
+.menu {
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-end; /* Align menu items to the right */
+  border-color: #333;
+  margin: 1rem;
+}
+
+.menu li {
+  display: inline-block;
+  border-color: #333;
+}
+
+header,
+nav,
+main,
+footer {
+  display: grid;
+  place-content: center;
+  grid-template-columns: 100%;
+  text-align: center;
+}
+
+footer {
+  background-color: #1e293b;
+  color: whitesmoke;
+  font-size: 0.9rem;
+  text-align: center;
+  height: 5rem;
+
+  /* Apply gradient shadow effect */
+  box-shadow: inset 0px 8px 10px -10px rgba(0, 0, 0, 0.8), /* Inner shadow */
+              0px -8px 10px -10px rgba(0, 0, 0, 0.8); /* Top shadow */
+}
+
+
+header {
+  top: 0;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  place-content: right;
+  padding: 1rem;
+  background-color: #1e293b;
+  color: whitesmoke;
+  font-size: 0.7rem;
+  text-align: end ;
+  height: 5rem;
+  box-shadow: 0px 5px 5px 0px rgba(86, 85, 85, 0.378); /* Add shadow */
+  margin-bottom: 1rem;
+
+}
+
+nav {
+  background: linear-gradient(125deg, #ffffff, #eee7df);
+  color: #000;
+  padding: 0rem;
+}
+
+main {
+  flex-grow: 1;
+  margin: 0;
+  margin-bottom: 3rem;
+}
+
+footer {
+  
+  bottom: 0;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+
+.container {
+border: 0;
+height: 100%;
+margin: 0;
+display: inline-flex;
+margin-bottom: 3rem;
+}
+
+
+
+
+.logo {
+  display: flex;
+  justify-content: center;
+  margin-top: 0.2rem;
+  margin-bottom: 0;
+  max-width: 90%; /* Set maximum width to 100% */
+}
+
+.profile-pic {
+   /* Use inline-block to align with text */
+  border-radius: 5%;
+  margin-top: 3rem;
+  margin-left: 8rem;
+  margin-right: -3rem;
+  vertical-align: middle; /* Align vertically with adjacent text */
+  border: 4px solid #1e293b;
+   /* Add border style */
+  
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  padding: 5rem;
+  margin-top: 0rem;
+  margin-bottom: 1rem;
+  display: inline-flex; /* Display as inline-block for alignment */
+}
+
+h3 {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  padding: 10rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  display: inline-flex; /* Display as inline-block for alignment */
+}
+
+
+
+/* || SMALL */
+@media screen and (min-width: 576px) {
+  body {
+    background: linear-gradient(125deg, #ffffff, #eee7df);
+  }
+  nav {
+    display: grid;
+  }
+
+  .logo {
+    display: flex;
+    justify-content: center;
+    margin-top: 0.2rem;
+    margin-bottom: 0;
+    max-width: 100%; /* Set maximum width to 100% */
+  }
+
+}
+
+/* || MEDIUM */
+@media screen and (min-width: 768px) {
+  body {
+    background: linear-gradient(125deg, #ffffff, #eee7df);
+  }
+}
+
+/* || LARGE */
+@media screen and (min-width: 992px) {
+  body {
+    background: linear-gradient(125deg, #ffffff, #eee7df);
+  }
+}
+
+/* || XL  */
+@media screen and (min-width: 1200px) {
+  body {
+    background: linear-gradient(125deg, #ffffff, #eee7df);
+  }
+
+  /* Menu styles */
+  .menu {
+    list-style-type: none;
+    align-items: right;
+    justify-content: right;
+    border-color: #333;
+  }
+
+  .menu li {
+    display: inline-block;
+    border-color: #333;
+  }
+
+  .menu li a {
+    text-decoration: none;
+    font-weight: lighter;
+    font-size: 19px;
+    padding: 10px 25px;
+    border-radius: 3px;
+    background: linear-gradient(to top, #eaeaea, #ffffff),
+      linear-gradient(to bottom, #dbdbdb, #ffffff);
+    color: #1c4777;
+    transition: background-color 0.3s, transform 0.3s;
+    font-family: "Courier New", Courier, monospace;
+    border: 1px solid #1c4777; /* Add border */
+    justify-content: flex-end;
+    margin-right: 0.1rem;
+  }
+
+  .menu li a:hover {
+    background: linear-gradient(
+      to right,
+      #598dc7,
+      #7fb0e1
+    ); /* Gradient background on hover */
+    color: white; /* Change text color to white on hover */
+    transform: scale(1.1);
+  }
+}
+
+/* || MOBILE DEVICE LANDSCAPE  */
+@media screen and (max-height: 425px) and (min-aspect-ratio: 7/4) {
+  body {
+    background: linear-gradient(125deg, #ffffff, #eee7df);
+  }
+
+  h1,
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  nav {
+    display: grid;
+  }
+}
+
+
+.column {
+  margin: 0 2rem; /* Adjust margin between columns as needed */
+  column-count: 2;
+}
+
+.progress-bar {
+  background-color: #f9c0c0;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+}
+
+.progress {
+  background-color: #1c4677e8;
+  color: white;
+  text-align: center;
+  padding: 0.3rem;
+  border-radius: 1rem;
+  font-size: 1.3rem;
+}
+
+h4 {
+  padding: 0.5rem;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 1.2rem;
+}
+
+h5 {
+  padding: 0.5rem;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+/* CSS styles for cursor */
+.cursor {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.1em;
+  height: 1.1em;
+  margin-left: 0.1rem;
+  background-color: rgb(255, 4, 226);
+  animation: blink-caret 0.75s infinite;
+}
+
+/* Keyframe animation for cursor blinking */
+@keyframes blink-caret {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+
+  
