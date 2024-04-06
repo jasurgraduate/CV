@@ -94,16 +94,15 @@ footer {
     display: none !important; /* Hide the first menu item */
   }
   
-
   .menu li a {
     text-decoration: none;
     font-size: 13px;
-    padding: 25px 0;
+    padding: 15px 0; /* Adjusted padding */
+    margin: 0; /* Reset margin */
     border-radius: 5px;
-    margin-bottom: 0;
     transition: background-color 0.3s ease, border-color 0.3s ease;
     background: linear-gradient(to top, #eaeaea, #ffffff),
-    linear-gradient(to bottom, #dbdbdb, #ffffff);
+      linear-gradient(to bottom, #dbdbdb, #ffffff);
     color: #1c4777;
     display: flex;
     justify-content: center;
@@ -112,12 +111,13 @@ footer {
     border-bottom-left-radius: 0.1rem;
     border-bottom-right-radius: 0.1rem;
   }
-
+  
   .menu li a:hover {
     background: linear-gradient(to right, #598dc7, #7fb0e1);
     color: white;
     transform: scale(1.01);
   }
+  
 
   .logo {
     display: flex;
