@@ -149,12 +149,16 @@ h3 {
   body {
     background: linear-gradient(125deg, #ffffff, #eee7df);
   }
+
+
+  
+
   nav {
     display: grid;
   }
 
   .logo {
-    display: flex;
+    display: grid;
     justify-content: center;
     margin-top: 0.2rem;
     margin-bottom: 0;
@@ -168,6 +172,52 @@ h3 {
   body {
     background: linear-gradient(125deg, #ffffff, #eee7df);
   }
+
+/* Menu styles */
+
+.menu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  background-color: #1e293b;
+  display: flex; /* Use flexbox to arrange items vertically */
+  flex-direction: column; /* Arrange items in a column */
+}
+
+.menu li {
+  border-bottom: 1px solid #fff;
+}
+
+.menu li a {
+  display: block; /* Display links as block elements */
+  text-decoration: none;
+  font-weight: lighter;
+  font-size: 32px;
+  width: 100%;
+  padding: 25px 25px;
+  text-align: center;
+  border-radius: 3px;
+  background: linear-gradient(to top, #eaeaea, #ffffff),
+    linear-gradient(to bottom, #dbdbdb, #ffffff);
+  color: #1c4777;
+  transition: background-color 0.3s, transform 0.3s;
+  font-family: "Courier New", Courier, monospace;
+  border: 1px solid #1c4777; /* Add border */
+  justify-content: center;
+  margin-right: 0.1rem;
+}
+
+.menu li a:hover {
+  background: linear-gradient(
+    to right,
+    #598dc7,
+    #7fb0e1
+  ); /* Gradient background on hover */
+  color: white; /* Change text color to white on hover */
+  transform: scale(1.1);
+}
+
+  
 }
 
 /* || LARGE */
@@ -182,6 +232,9 @@ h3 {
   body {
     background: linear-gradient(125deg, #ffffff, #eee7df);
   }
+
+
+ 
 
   /* Menu styles */
   .menu {
