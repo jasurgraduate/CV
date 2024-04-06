@@ -90,9 +90,9 @@ footer {
     flex-grow: 1; /* Distribute space evenly */
   }
   
-  .menu li:first-child {
-    display: none !important; /* Hide the first menu item */
-  }
+  /* .menu li:first-child {
+    display: none !important;
+  } */
   
   .menu li a {
     text-decoration: none;
