@@ -311,7 +311,7 @@ footer {
   }
 
   h2 {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight: bold;
     text-align: center;
     padding: 1rem;
@@ -393,4 +393,25 @@ footer {
   }
 
   /* Reset styles for MOBILE DEVICE LANDSCAPE */
+}
+
+
+.cursor {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.1em;
+  height: 1.1em;
+  margin-left: 0.1rem;
+  background-color: rgb(255, 4, 226);
+  animation: blink-caret 0.75s infinite;
+}
+
+@keyframes blink-caret {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
 }
