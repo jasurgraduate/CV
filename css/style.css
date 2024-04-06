@@ -381,10 +381,9 @@ footer {
     caret-color: rgb(181, 0, 160);
   }
 
-  /* Reset styles for MEDIUM SCREEN */
-  .menu li:first-child {
-    display: block; /* Reset display */
-  }
+  /* .menu li:first-child {
+    display: block; /
+  } */
 }
 
 /* || MOBILE DEVICE LANDSCAPE  */
