@@ -100,9 +100,10 @@ footer {
     font-size: 13px;
     padding: 25px 0;
     border-radius: 5px;
+    margin-bottom: 0;
     transition: background-color 0.3s ease, border-color 0.3s ease;
     background: linear-gradient(to top, #eaeaea, #ffffff),
-      linear-gradient(to bottom, #dbdbdb, #ffffff);
+    linear-gradient(to bottom, #dbdbdb, #ffffff);
     color: #1c4777;
     display: flex;
     justify-content: center;
