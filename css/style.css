@@ -38,8 +38,8 @@ footer {
 
 header {
   top: 0;
-  border-bottom-left-radius: 1rem;
-  border-bottom-right-radius: 1rem;
+  border-bottom-left-radius: 0.3rem;
+  border-bottom-right-radius: 0.3rem;
   place-content: right;
   padding: 1rem;
   background-color: #1e293b;
