@@ -22,13 +22,11 @@ body {
 .menu {
   list-style-type: none;
   display: flex;
-  justify-content: flex-end; /* Align menu items to the right */
+  flex-direction: row; /* Align menu items to the right */
   border-color: #333;
-  margin: 1rem;
 }
 
 .menu li {
-  display: inline-block;
   border-color: #333;
 }
 
@@ -174,37 +172,40 @@ h3 {
   }
 
 /* Menu styles */
-
 .menu {
   list-style-type: none;
-  padding: 0;
-  margin: 0;
-  background-color: #1e293b;
-  display: flex; /* Use flexbox to arrange items vertically */
-  flex-direction: column; /* Arrange items in a column */
+  display: flex; /* Use flexbox to arrange items horizontally */
+  justify-content: space-between; /* Distribute items evenly */
+  position: fixed; /* Fixed position to keep menu at the bottom */
+  bottom: 0; /* Position from the bottom */
+  left: 0; /* Position from the left */
+  width: 100%; /* Full width of the viewport */
+  background-color: #fff; /* Background color for the menu */
+  box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1); /* Add shadow to the menu */
+  z-index: 1000; /* Set z-index to keep menu above other content */
+  border-top: 2px solid #ccc; /* Add visible border at the top of the menu */
 }
 
 .menu li {
-  border-bottom: 1px solid #fff;
+  flex-grow: 1; /* Allow items to grow and fill the space evenly */
 }
 
 .menu li a {
-  display: block; /* Display links as block elements */
+  display: flex; /* Display links as flex items */
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
   text-decoration: none;
   font-weight: lighter;
-  font-size: 32px;
-  width: 100%;
-  padding: 25px 25px;
-  text-align: center;
-  border-radius: 3px;
-  background: linear-gradient(to top, #eaeaea, #ffffff),
-    linear-gradient(to bottom, #dbdbdb, #ffffff);
+  font-size: 20px;
+  padding: 15px 0; /* Padding top and bottom, no padding left and right */
   color: #1c4777;
   transition: background-color 0.3s, transform 0.3s;
   font-family: "Courier New", Courier, monospace;
-  border: 1px solid #1c4777; /* Add border */
-  justify-content: center;
-  margin-right: 0.1rem;
+  border-right: 1px solid #b0b0b0; /* Add border between menu items */
+}
+
+.menu li:last-child a {
+  border-right: none; /* Remove border on the last menu item */
 }
 
 .menu li a:hover {
@@ -236,44 +237,49 @@ h3 {
 
  
 
-  /* Menu styles */
-  .menu {
-    list-style-type: none;
-    align-items: right;
-    justify-content: right;
-    border-color: #333;
-  }
+/* Menu styles */
+.menu {
+  list-style-type: none;
+  margin: 0;
+  display: flex; /* Use flexbox to arrange items */
+  flex-direction: row; /* Arrange items in a row */
+justify-content: flex-end;
+margin-right: 2rem;
 
-  .menu li {
-    display: inline-block;
-    border-color: #333;
-  }
+}
 
-  .menu li a {
-    text-decoration: none;
-    font-weight: lighter;
-    font-size: 19px;
-    padding: 10px 25px;
-    border-radius: 3px;
-    background: linear-gradient(to top, #eaeaea, #ffffff),
-      linear-gradient(to bottom, #dbdbdb, #ffffff);
-    color: #1c4777;
-    transition: background-color 0.3s, transform 0.3s;
-    font-family: "Courier New", Courier, monospace;
-    border: 1px solid #1c4777; /* Add border */
-    justify-content: flex-end;
-    margin-right: 0.1rem;
-  }
+.menu li {
+  margin: 0; /* Remove margin */
+}
 
-  .menu li a:hover {
-    background: linear-gradient(
-      to right,
-      #598dc7,
-      #7fb0e1
-    ); /* Gradient background on hover */
-    color: white; /* Change text color to white on hover */
-    transform: scale(1.1);
-  }
+.menu li a {
+  text-decoration: none;
+  font-weight: lighter;
+  font-size: 20px;
+  margin: 0.01rem;
+  padding: 15px 25px; /* Negative margin to stick items together */
+  white-space: nowrap; /* Prevent text wrapping */
+  text-align: center;
+  border-radius: 3px;
+  background: linear-gradient(to top, #eaeaea, #ffffff),
+    linear-gradient(to bottom, #dbdbdb, #ffffff);
+  color: #1c4777;
+  transition: background-color 0.3s, transform 0.01s;
+  font-family: "Courier New", Courier, monospace;
+  border: 1px solid #1c4777; /* Add border */
+}
+
+.menu li a:hover {
+  background: linear-gradient(
+    to right,
+    #598dc7,
+    #7fb0e1
+  ); /* Gradient background on hover */
+  color: white; /* Change text color to white on hover */
+  transform: scale(1.01);
+}
+
+
 }
 
 /* || MOBILE DEVICE LANDSCAPE  */
