@@ -143,11 +143,57 @@ h3 {
 
 
 /* || SMALL */
-@media screen and (min-width: 576px) {
+@media screen and (min-width: 476px) {
   body {
     background: linear-gradient(125deg, #ffffff, #eee7df);
   }
 
+/* Menu styles */
+.menu {
+  list-style-type: none;
+  display: flex; /* Use flexbox to arrange items horizontally */
+  justify-content: space-between; /* Distribute items evenly */
+  position: fixed; /* Fixed position to keep menu at the bottom */
+  bottom: 0; /* Position from the bottom */
+  left: 0; /* Position from the left */
+  width: 100%; /* Full width of the viewport */
+  background-color: #fff; /* Background color for the menu */
+  box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1); /* Add shadow to the menu */
+  z-index: 1000; /* Set z-index to keep menu above other content */
+  border-top: 2px solid #ccc; /* Add visible border at the top of the menu */
+}
+
+.menu li {
+  flex-grow: 1; /* Allow items to grow and fill the space evenly */
+}
+
+.menu li a {
+  display: flex; /* Display links as flex items */
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
+  text-decoration: none;
+  font-weight: lighter;
+  font-size: 15px;
+  padding: 20px 10px; /* Padding top and bottom, no padding left and right */
+  color: #1c4777;
+  transition: background-color 0.3s, transform 0.3s;
+  font-family: "Courier New", Courier, monospace;
+  border-right: 1px solid #b0b0b0; /* Add border between menu items */
+}
+
+.menu li:last-child a {
+  border-right: none; /* Remove border on the last menu item */
+}
+
+.menu li a:hover {
+  background: linear-gradient(
+    to right,
+    #598dc7,
+    #7fb0e1
+  ); /* Gradient background on hover */
+  color: white; /* Change text color to white on hover */
+  transform: scale(1.1);
+}
 
   
 
