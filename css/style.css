@@ -95,8 +95,8 @@ header {
     margin: 0; /* Reset margin */
     border-radius: 5px;
     transition: background-color 0.3s ease, border-color 0.3s ease;
-    background: linear-gradient(to top, #eaeaea, #ffffff),
-      linear-gradient(to bottom, #dbdbdb, #ffffff);
+    background: linear-gradient(to top, rgba(234, 234, 234, 0.8), rgba(255, 255, 255, 0.8)),
+                linear-gradient(to bottom, rgba(219, 219, 219, 0.8), rgba(255, 255, 255, 0.8));
     color: #1c4777;
     display: flex;
     justify-content: center;
@@ -104,7 +104,8 @@ header {
     border: 1px solid #5c5c5c;
     border-bottom-left-radius: 0.1rem;
     border-bottom-right-radius: 0.1rem;
-  }
+}
+
   
   .menu li a:hover {
     background: linear-gradient(to right, #598dc7, #7fb0e1);
