@@ -13,6 +13,22 @@ body {
   background: linear-gradient(125deg, #ffffff, #eee7df);
 }
 
+
+a {
+  color: wheat;
+  text-decoration: none;
+  font-display: relative;
+  cursor: pointer;
+  border: 1px solid transparent; /* Initially set border to transparent */
+  padding: 5px 15px; /* Add padding for space around text */
+  transition: border-color 0.3s ease; /* Add transition for smooth animation */
+}
+
+a:hover {
+  border-color: wheat; /* Change border color on hover */
+}
+
+
 header,
 nav,
 main,
