@@ -7,7 +7,8 @@
 
 /* || COMMON STYLES */
 body {
-  font: 1.5rem "Nunito", sans-serif;
+  font-size: 1.5rem;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   min-height: 100vh;
   background: linear-gradient(125deg, #ffffff, #eee7df);
 }
@@ -87,6 +88,7 @@ footer {
   
   .menu li {
     margin: 0;
+    font-weight: bold;
     flex-grow: 1; /* Distribute space evenly */
   }
   
@@ -261,6 +263,7 @@ footer {
 
   .menu li {
     margin: 0;
+    font-weight: bold;
     flex-grow: 1;
   }
 
