@@ -151,7 +151,7 @@ header {
     display: grid;
     place-items: center;
     height: 15vh;
-    margin-bottom: 0rem;
+    margin-bottom: 1rem;
   }
   
   .profile-pic {
@@ -179,13 +179,14 @@ header {
 
   .column {
     margin: 1rem 2rem;
-    column-count: 2;
+    column-count: 1;
   }
 
   .progress-bar {
     background-color: #f9c0c0;
     border-radius: 1rem;
     margin-bottom: 1rem;
+    width: 20rem;
   }
 
   .progress {
@@ -347,6 +348,7 @@ header {
     background-color: #f9c0c0;
     border-radius: 1rem;
     margin-bottom: 1rem;
+    width: 35rem;
   }
 
   .progress {
