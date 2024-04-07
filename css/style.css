@@ -80,7 +80,7 @@ header {
   
   .menu li {
     margin: 0;
-    font-weight: bold;
+    font-weight: 500;
     flex-grow: 1; /* Distribute space evenly */
   }
   
@@ -172,7 +172,6 @@ header {
 
   h3 {
     font-size: 2rem;
-    font-weight: bold;
     text-align: center;
     padding: 1rem;
     margin-top: 1rem;
