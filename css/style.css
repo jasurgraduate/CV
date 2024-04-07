@@ -20,7 +20,7 @@ a {
   font-display: relative;
   cursor: pointer;
   border: 1px solid transparent; /* Initially set border to transparent */
-  padding: 5px 15px; /* Add padding for space around text */
+  padding: 5px px; /* Add padding for space around text */
   transition: border-color 0.3s ease; /* Add transition for smooth animation */
 }
 
