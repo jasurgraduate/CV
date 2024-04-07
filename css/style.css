@@ -144,6 +144,7 @@ header {
     margin-top: 1rem;
     display: grid;
     place-items: center;
+    justify-content: center;
     margin-bottom: 5rem;
   }
 
