@@ -20,7 +20,7 @@ a {
   font-display: relative;
   cursor: pointer;
   border: 1px solid transparent; /* Initially set border to transparent */
-  padding: 5px px; /* Add padding for space around text */
+  padding: 3px 15px; /* Add padding for space around text */
   transition: border-color 0.3s ease; /* Add transition for smooth animation */
 }
 
@@ -80,10 +80,16 @@ footer {
   border-top-right-radius: 1rem;
 }
 
-/* || SMALL SCREEN */
+/* || SMALL SCREEN ---------------------------------------------------MOBILE*/
 @media screen and (min-width: 76px) {
   body {
     background: linear-gradient(125deg, #ffffff, #eee7df);
+  }
+
+  main {
+    list-style-type: none;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
   }
 
   nav {
@@ -153,9 +159,9 @@ footer {
 
   .container {
     border: 0;
-    height: 70vh;
+    height: 50vh;
     margin: 0;
-    margin-top: 1rem;
+    margin-top: 4rem;
     display: grid;
     place-items: center;
     margin-bottom: 3rem;
@@ -167,6 +173,8 @@ footer {
     max-width: 200px;
     max-height: 200px;
     object-fit: cover;
+    display: grid;
+    margin-bottom: 10rem;
   }
 
   h2 {
