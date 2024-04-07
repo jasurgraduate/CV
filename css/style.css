@@ -156,7 +156,7 @@ header {
   
   .profile-pic {
     border-radius: 5%;
-    border: 2px solid #1e293b;
+    border: 2px solid #3dd8ffe4;
     max-width: 200px;
     max-height: 200px;
     object-fit: cover;
@@ -323,7 +323,7 @@ header {
     list-style-type: none;
     border-radius: 5%;
     vertical-align: middle;
-    border: 2px solid #1e293b;
+    border: 2px solid #3dd8ffe4;
   }
 
   
