@@ -8,8 +8,10 @@
 /* || COMMON STYLES */
 body {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  background: linear-gradient(125deg, #ffffff, #eee7df);
+  background: 
+    linear-gradient(185deg, #f9f4f9, #ece0d2); /* Left to right gradient */
 }
+
 
 main {
   height: 100%;
@@ -54,7 +56,7 @@ footer {
 header {
   border-bottom-left-radius: 0.3rem;
   border-bottom-right-radius: 0.3rem;
-  background-color: #1e293b;
+  background-color: #1e293bfa;
   color: whitesmoke;
   font-size: 0.7rem;
   font-weight: 450;
@@ -141,6 +143,10 @@ header {
     font-size: 22px;
   }
 
+  h1 {
+    font-weight: lighter;
+  }
+
   .container2 {
     list-style-type: none;
     margin-top: 1rem;
@@ -158,9 +164,9 @@ header {
   }
   
   .profile-pic {
-    border-radius: 5%;
-    border: 2px solid;
-    border-image: linear-gradient(75deg, #40a6ff, #f6aff0);
+    border-radius: 1%;
+    border: 5px solid;
+    border-image: linear-gradient(75deg, #4a8eca, #fae3f8);
     border-image-slice: 0.5;
     max-width: 200px;
     max-height: 200px;
@@ -232,16 +238,12 @@ header {
 
 /* || MEDIUM */
 @media screen and (min-width: 768px) {
-  body {
-    background: linear-gradient(125deg, #ffffff, #eee7df);
-  }
+  
 }
 
 /* || LARGE */
 @media screen and (min-width: 992px) {
-  body {
-    background: linear-gradient(125deg, #ffffff, #eee7df);
-  }
+ 
 }
 
 /* || XL  SCREEN ----------------------------------------------------------------------- LAPTOP */
@@ -325,10 +327,9 @@ header {
   .profile-pic {
     all: none;
     list-style-type: none;
-    border-radius: 5%;
-    vertical-align: middle;
-    border: 2px solid;
-    border-image: linear-gradient(75deg, #40a6ff, #f6aff0);
+    border-radius: 1%;
+    border: 5px solid;
+    border-image: linear-gradient(75deg, #4a8eca, #fae3f8);
     border-image-slice: 0.5;
   }
   
@@ -398,9 +399,7 @@ header {
 
 /* || MOBILE DEVICE LANDSCAPE  */
 @media screen and (max-height: 425px) and (min-aspect-ratio: 7/4) {
-  body {
-    background: linear-gradient(125deg, #ffffff, #eee7df);
-  }
+  
 
   /* Reset styles for MOBILE DEVICE LANDSCAPE */
 }
