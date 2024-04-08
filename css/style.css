@@ -241,6 +241,22 @@ header {
     animation: blink-caret 0.75s infinite;
   }
 
+  h6 {
+    font-size: 1rem;
+    margin: 1.2rem;
+    a {
+      color:  #1c4677;
+      cursor: pointer;
+      border: 1px solid transparent; /* Initially set border to transparent */
+      padding: 3px 75px; /* Add padding for space around text */
+      transition: border-color 0.3s ease; /* Add transition for smooth animation */
+    }
+    
+    a:hover {
+      border-color:  #1c4677; /* Change border color on hover */
+    }
+  }
+
 }
 
 /* || MEDIUM */
@@ -400,6 +416,22 @@ h2 {
     animation: blink-caret 0.75s infinite;
   }
 
+  h6 {
+    font-size: 2rem;
+    margin: 1.2rem;
+    a {
+      color:  #1c4677;
+      cursor: pointer;
+      border: 1px solid transparent; /* Initially set border to transparent */
+      padding: 3px 75px; /* Add padding for space around text */
+      transition: border-color 0.3s ease; /* Add transition for smooth animation */
+    }
+    
+    a:hover {
+      border-color:  #1c4677; /* Change border color on hover */
+    }
+  }
+
   
   /* .menu li:first-child {
     display: block; /
@@ -433,3 +465,9 @@ h2 {
     opacity: 0;
   }
 }
+
+.container4 {
+  margin-top: 1rem;
+}
+
+
