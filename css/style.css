@@ -256,6 +256,31 @@ header {
       border-color:  #1c4677; /* Change border color on hover */
     }
   }
+  
+  .btn {
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 1.2rem 2rem; /* Adjusted padding */
+    margin: 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    background: linear-gradient(to top, rgba(234, 234, 234, 0.7), rgba(255, 255, 255, 0.7)),
+                linear-gradient(to bottom, rgba(219, 219, 219, 0.7), rgba(255, 255, 255, 0.7));
+    color: #1c4777;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border: 1px solid #5c5c5c;
+}
+
+.btn:hover {
+  background: linear-gradient(to right, #598dc7, #7fb0e1);
+  color: white;
+  transform: scale(1.01);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); /* Optional: Add a shadow for depth */
+    
+}
+
 
 }
 
@@ -430,6 +455,32 @@ h2 {
     a:hover {
       border-color:  #1c4677; /* Change border color on hover */
     }
+
+
+    .btn {
+      text-decoration: none;
+      font-size: 1.2rem;
+      padding: 1.5rem 4rem; /* Adjusted padding */
+      margin: 1rem;
+      border-radius: 5px;
+      transition: background-color 0.3s ease, border-color 0.3s ease;
+      background: linear-gradient(to top, rgba(234, 234, 234, 0.7), rgba(255, 255, 255, 0.7)),
+                  linear-gradient(to bottom, rgba(219, 219, 219, 0.7), rgba(255, 255, 255, 0.7));
+      color: #1c4777;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      border: 1px solid #5c5c5c;
+  }
+  
+  .btn:hover {
+    background: linear-gradient(to right, #598dc7, #7fb0e1);
+    color: white;
+    transform: scale(1.01);
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); /* Optional: Add a shadow for depth */
+      
+  }
+
   }
 
   
@@ -468,6 +519,7 @@ h2 {
 
 .container4 {
   margin-top: 1rem;
+  margin-bottom: 3rem;
 }
 
 
