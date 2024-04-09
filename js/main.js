@@ -1,4 +1,4 @@
-const text = "Hello! Welcome to my personal website. Here you can see my personal projects and read my blogs :) ";
+const text = "Hello 👋! Welcome to my personal website. Here you can see my personal projects and read my blogs :) ";
 
 // Function to type out text with a cursor
 function typeWriter(text, i = 0) {
@@ -14,5 +14,3 @@ function typeWriter(text, i = 0) {
 
 // Start typing effect
 typeWriter(text);
-
-
