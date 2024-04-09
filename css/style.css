@@ -7,15 +7,17 @@
 
 @font-face {
   font-family: 'typed';
-  src: url('fonts/typed') format('truetype'); /* Modern Browsers */
+  src: url('fonts/typed') format('truetype');
+  /* Modern Browsers */
 }
 
 
 /* || COMMON STYLES */
 body {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  background: 
-    linear-gradient(185deg, #f9f4f9, #ece0d2); /* Left to right gradient */
+  background:
+    linear-gradient(185deg, #f9f4f9, #ece0d2);
+  /* Left to right gradient */
 }
 
 
@@ -29,13 +31,17 @@ a {
   text-decoration: none;
   font-display: relative;
   cursor: pointer;
-  border: 1px solid transparent; /* Initially set border to transparent */
-  padding: 3px 15px; /* Add padding for space around text */
-  transition: border-color 0.3s ease; /* Add transition for smooth animation */
+  border: 1px solid transparent;
+  /* Initially set border to transparent */
+  padding: 3px 15px;
+  /* Add padding for space around text */
+  transition: border-color 0.3s ease;
+  /* Add transition for smooth animation */
 }
 
 a:hover {
-  border-color: wheat; /* Change border color on hover */
+  border-color: wheat;
+  /* Change border color on hover */
 }
 
 
@@ -51,7 +57,7 @@ footer {
 
 footer {
   background-color: #1e293b;
-  color: whitesmoke;  
+  color: whitesmoke;
   /* Apply gradient shadow effect */
   box-shadow: inset 0px 8px 10px -10px rgba(0, 0, 0, 0.8),
     /* Inner shadow */
@@ -73,7 +79,7 @@ header {
 
 /* || SMALL SCREEN ---------------------------------------------------MOBILE*/
 @media screen and (min-width: 76px) {
-  
+
 
   .menu {
     list-style-type: none;
@@ -86,26 +92,29 @@ header {
     padding: 0;
     margin: 0;
   }
-  
+
   .menu li {
     margin: 0;
     font-weight: 500;
-    flex-grow: 1; /* Distribute space evenly */
+    flex-grow: 1;
+    /* Distribute space evenly */
   }
-  
+
   /* .menu li:first-child {
     display: none !important;
   } */
-  
+
   .menu li a {
     text-decoration: none;
     font-size: 12px;
-    padding: 30px 0px; /* Adjusted padding */
-    margin: 0; /* Reset margin */
+    padding: 30px 0px;
+    /* Adjusted padding */
+    margin: 0;
+    /* Reset margin */
     border-radius: 5px;
     transition: background-color 0.3s ease, border-color 0.3s ease;
     background: linear-gradient(to top, rgba(234, 234, 234, 0.7), rgba(255, 255, 255, 0.7)),
-                linear-gradient(to bottom, rgba(219, 219, 219, 0.7), rgba(255, 255, 255, 0.7));
+      linear-gradient(to bottom, rgba(219, 219, 219, 0.7), rgba(255, 255, 255, 0.7));
     color: #1c4777;
     display: flex;
     justify-content: center;
@@ -113,15 +122,15 @@ header {
     border: 1px solid #5c5c5c;
     border-bottom-left-radius: 0.1rem;
     border-bottom-right-radius: 0.1rem;
-}
+  }
 
-  
+
   .menu li a:hover {
     background: linear-gradient(to right, #598dc7, #7fb0e1);
     color: white;
     transform: scale(1.01);
   }
-  
+
 
   .logo {
     display: flex;
@@ -145,13 +154,13 @@ header {
   h2 {
     display: grid;
     margin: 2rem;
-    font-weight: lighter;
+    font-weight: normal;
     font-size: 22px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   }
 
   h1 {
-    font-weight: lighter;
+    font-weight: normal;
   }
 
   .container2 {
@@ -169,7 +178,7 @@ header {
     height: 15vh;
     margin-bottom: 1rem;
   }
-  
+
   .profile-pic {
     border-radius: 1%;
     border: 5px solid;
@@ -244,59 +253,62 @@ header {
   h6 {
     font-size: 0.8rem;
     margin: 1.2rem;
+
     a {
-      color:  #1c4677;
+      color: #1c4677;
       cursor: pointer;
-      border: 1px solid transparent; /* Initially set border to transparent */
-      padding: 3px 25px; /* Add padding for space around text */
-      transition: border-color 0.3s ease; /* Add transition for smooth animation */
+      border: 1px solid transparent;
+      /* Initially set border to transparent */
+      padding: 3px 25px;
+      /* Add padding for space around text */
+      transition: border-color 0.3s ease;
+      /* Add transition for smooth animation */
     }
-    
+
     a:hover {
-      border-color:  #1c4677; /* Change border color on hover */
+      border-color: #1c4677;
+      /* Change border color on hover */
     }
   }
-  
+
   .btn {
     text-decoration: none;
-    font-size: 1.2rem;
-    padding: 1.2rem 2rem; /* Adjusted padding */
+    font-size: 1.1rem;
+    padding: 1.2rem 1.5rem;
+    /* Adjusted padding */
     margin: 1rem;
     border-radius: 5px;
     transition: background-color 0.3s ease, border-color 0.3s ease;
     background: linear-gradient(to top, rgba(234, 234, 234, 0.7), rgba(255, 255, 255, 0.7)),
-                linear-gradient(to bottom, rgba(219, 219, 219, 0.7), rgba(255, 255, 255, 0.7));
+      linear-gradient(to bottom, rgba(219, 219, 219, 0.7), rgba(255, 255, 255, 0.7));
     color: #1c4777;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     border: 1px solid #5c5c5c;
-}
+  }
 
-.btn:hover {
-  background: linear-gradient(to right, #598dc7, #7fb0e1);
-  color: white;
-  transform: scale(1.01);
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); /* Optional: Add a shadow for depth */
-    
-}
+  .btn:hover {
+    background: linear-gradient(to right, #598dc7, #7fb0e1);
+    color: white;
+    transform: scale(1.01);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    /* Optional: Add a shadow for depth */
+
+  }
 
 
 }
 
 /* || MEDIUM */
-@media screen and (min-width: 768px) {
-  
-}
+@media screen and (min-width: 768px) {}
 
 /* || LARGE */
-@media screen and (min-width: 992px) {
- 
-}
+@media screen and (min-width: 992px) {}
 
 /* || XL  SCREEN ----------------------------------------------------------------------- LAPTOP */
 @media screen and (min-width: 1200px) {
-  
+
 
   .menu {
     list-style-type: none;
@@ -323,7 +335,7 @@ header {
     border-radius: 5px;
     transition: background-color 0.3s ease, border-color 0.3s ease;
     background: linear-gradient(to top, rgba(234, 234, 234, 0.7), rgba(255, 255, 255, 0.7)),
-                linear-gradient(to bottom, rgba(219, 219, 219, 0.7), rgba(255, 255, 255, 0.7));
+      linear-gradient(to bottom, rgba(219, 219, 219, 0.7), rgba(255, 255, 255, 0.7));
     color: #1c4777;
     display: flex;
     justify-content: center;
@@ -340,7 +352,7 @@ header {
   }
 
   .container {
-    display: inline-flex; 
+    display: inline-flex;
     align-items: center;
     justify-content: center;
   }
@@ -358,7 +370,7 @@ header {
     place-items: center;
   }
 
- 
+
 
   .typing.text {
     caret-color: rgb(181, 0, 160);
@@ -380,11 +392,11 @@ header {
     border-image: linear-gradient(75deg, #4a8eca, #fae3f8);
     border-image-slice: 0.5;
   }
-  
-h2 {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-  
+
+  h2 {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+
 
 
   h3 {
@@ -444,46 +456,54 @@ h2 {
   h6 {
     font-size: 2rem;
     margin: 1.2rem;
+
     a {
-      color:  #1c4677;
+      color: #1c4677;
       cursor: pointer;
-      border: 1px solid transparent; /* Initially set border to transparent */
-      padding: 3px 75px; /* Add padding for space around text */
-      transition: border-color 0.3s ease; /* Add transition for smooth animation */
+      border: 1px solid transparent;
+      /* Initially set border to transparent */
+      padding: 3px 75px;
+      /* Add padding for space around text */
+      transition: border-color 0.3s ease;
+      /* Add transition for smooth animation */
     }
-    
+
     a:hover {
-      border-color:  #1c4677; /* Change border color on hover */
+      border-color: #1c4677;
+      /* Change border color on hover */
     }
 
 
     .btn {
       text-decoration: none;
+      list-style-type: none;
       font-size: 1.2rem;
-      padding: 1.5rem 4rem; /* Adjusted padding */
+      padding: 1.5rem 4rem;
+      /* Adjusted padding */
       margin: 1rem;
       border-radius: 5px;
       transition: background-color 0.3s ease, border-color 0.3s ease;
       background: linear-gradient(to top, rgba(234, 234, 234, 0.7), rgba(255, 255, 255, 0.7)),
-                  linear-gradient(to bottom, rgba(219, 219, 219, 0.7), rgba(255, 255, 255, 0.7));
+        linear-gradient(to bottom, rgba(219, 219, 219, 0.7), rgba(255, 255, 255, 0.7));
       color: #1c4777;
       display: flex;
       justify-content: flex-start;
       align-items: center;
       border: 1px solid #5c5c5c;
-  }
-  
-  .btn:hover {
-    background: linear-gradient(to right, #598dc7, #7fb0e1);
-    color: white;
-    transform: scale(1.01);
-      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); /* Optional: Add a shadow for depth */
-      
-  }
+    }
+
+    .btn:hover {
+      background: linear-gradient(to right, #598dc7, #7fb0e1);
+      color: white;
+      transform: scale(1.01);
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+      /* Optional: Add a shadow for depth */
+
+    }
 
   }
 
-  
+
   /* .menu li:first-child {
     display: block; /
   } */
@@ -491,7 +511,7 @@ h2 {
 
 /* || MOBILE DEVICE LANDSCAPE  */
 @media screen and (max-height: 425px) and (min-aspect-ratio: 7/4) {
-  
+
 
   /* Reset styles for MOBILE DEVICE LANDSCAPE */
 }
@@ -508,10 +528,12 @@ h2 {
 }
 
 @keyframes blink-caret {
+
   0%,
   100% {
     opacity: 1;
   }
+
   50% {
     opacity: 0;
   }
@@ -521,5 +543,3 @@ h2 {
   margin-top: 1rem;
   margin-bottom: 3rem;
 }
-
-
