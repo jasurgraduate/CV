@@ -18,7 +18,7 @@ typeWriter(text);
 
 // Profile slide show
 // Array of image URLs for the slideshow
-const imageUrls = ['pic.png', 'pic6.png', 'pic1.png', 'pic3.png', 'pic2.png', 'pic4.png', 'pic5.png', 'pic7.png']; // Add more image URLs as needed
+const imageUrls = ['pic.png', 'pic6.png', 'pic2.png', 'pic5.png']; // Add more image URLs as needed
 let currentIndex = 0;
 const profilePic = document.querySelector('.profile-pic');
 
