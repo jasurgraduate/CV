@@ -165,7 +165,7 @@ header {
 
   .container2 {
     list-style-type: none;
-    margin-top: 1rem;
+    margin-top: 3rem;
     display: grid;
     place-items: center;
     justify-content: center;
