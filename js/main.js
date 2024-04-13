@@ -14,3 +14,21 @@ function typeWriter(text, i = 0) {
 
 // Start typing effect
 typeWriter(text);
+
+
+// Profile slide show
+// Array of image URLs for the slideshow
+const imageUrls = ['pic.png', 'pic6.png', 'pic1.png', 'pic3.png', 'pic2.png', 'pic4.png', 'pic5.png', 'pic7.png']; // Add more image URLs as needed
+let currentIndex = 0;
+const profilePic = document.querySelector('.profile-pic');
+
+// Function to change the profile picture
+function changeProfilePic() {
+  profilePic.src = imageUrls[currentIndex];
+  currentIndex = (currentIndex + 1) % imageUrls.length;
+}
+
+// Call the changeProfilePic function initially and then every 2 seconds
+changeProfilePic(); // Call once to set initial image
+setInterval(changeProfilePic, 2500); // Call every 2 seconds
+
