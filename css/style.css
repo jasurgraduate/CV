@@ -191,13 +191,14 @@ header {
   }
   
   @keyframes glow {
-      from {
-          box-shadow: 0 0 10px rgb(30, 79, 225); /* Initial shadow */
-      }
-      to {
-          box-shadow: 0 0 20px rgb(174, 44, 207); /* Glowing shadow */
-      }
-  }
+    from {
+      box-shadow: 0 0 2rem rgb(211, 81, 244); /* Initial shadow */
+    }
+    to {
+      box-shadow: 0 0 2rem rgb(30, 79, 225);
+         /* Glowing shadow */
+    }
+}
   
   .typing.text {
     caret-color: rgb(181, 0, 160);
@@ -406,10 +407,11 @@ header {
 
 @keyframes glow {
     from {
-        box-shadow: 0 0 10px rgb(30, 79, 225); /* Initial shadow */
+      box-shadow: 0 0 2rem rgb(211, 81, 244); /* Initial shadow */
     }
     to {
-        box-shadow: 0 0 20px rgb(174, 44, 207); /* Glowing shadow */
+      box-shadow: 0 0 2rem rgb(30, 79, 225);
+         /* Glowing shadow */
     }
 }
 
