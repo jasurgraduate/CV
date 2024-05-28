@@ -26,6 +26,41 @@ main {
 }
 
 
+button {
+  background-color: #4caf4f00; /* Green background */
+  border: none;
+  cursor: pointer; /* Rounded corners */
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2); /* Add shadow */
+}
+button:hover {
+  background-color: #1c467700; /* Darker green on hover */
+}
+
+
+
+#confettiButton {
+  background-color: transparent; /* Transparent background */
+  cursor: pointer; /* Pointer cursor */
+  border-radius: 0.2rem; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Light shadow */
+  padding: 0.2rem; /* Padding inside button */
+  display: inline-flex; /* Align with text */
+  align-items: center; /* Center content */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+#confettiButton:hover {
+  transform: scale(2.5); /* Slightly increase size on hover */
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* Darker shadow on hover */
+}
+
+.party-icon {
+  width: 1.7rem; /* Adjust size of the icon */
+  height: 1.7rem; /* Adjust size of the icon */
+  display: block; /* Make sure it's a block element */
+}
+
+
 a {
   color: wheat;
   text-decoration: none;
@@ -400,14 +435,14 @@ header {
     border-top-left-radius: 1rem;
     object-fit: cover;
     display: block;
-    width: 20rem;
-    height: 20rem;
+    width: 18rem;
+    height: 18rem;
     animation: glow 2s infinite alternate; /* Glowing animation */
 }
 
 @keyframes glow {
     from {
-      box-shadow: 0 0 2rem rgb(211, 81, 244); /* Initial shadow */
+      box-shadow: 0 0 2rem rgb(249, 120, 240); /* Initial shadow */
     }
     to {
       box-shadow: 0 0 2rem rgb(30, 79, 225);
