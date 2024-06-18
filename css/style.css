@@ -216,8 +216,8 @@ header {
     transform: rotate(3deg); /* Rotate the image by -20 degrees */
     border-bottom-right-radius: 1rem;
     border-top-left-radius: 1rem;
-    width: 155px;
-    height: 155px;
+    width: 125px;
+    height: 125px;
     animation: glow 1.5s infinite alternate; /* Glowing animation */
   }
 
@@ -227,8 +227,8 @@ header {
     transform: rotate(-3deg); /* Rotate the image by -20 degrees */
     border-bottom-right-radius: 1rem;
     border-top-left-radius: 1rem;
-    width: 155px;
-    height: 155px;
+    width: 135px;
+    height: 135px;
     animation: glow 1.5s infinite alternate; /* Glowing animation */
   }
 
@@ -239,8 +239,8 @@ header {
     transform: rotate(-3deg); /* Rotate the image by -20 degrees */
     border-bottom-right-radius: 1rem;
     border-top-left-radius: 1rem;
-    width: 175px;
-    height: 175px;
+    width: 125px;
+    height: 125px;
     animation: glow 1.5s infinite alternate; /* Glowing animation */
   }
 
@@ -250,8 +250,8 @@ header {
     transform: rotate(-4deg); /* Rotate the image by -20 degrees */
     border-bottom-right-radius: 1rem;
     border-top-left-radius: 1rem;
-    width: 155px;
-    height: 145px;
+    width: 125px;
+    height: 125px;
     animation: glow 1.5s infinite alternate; /* Glowing animation */
   }
 
