@@ -122,6 +122,7 @@ header {
     justify-content: space-around;
     padding: 0;
     margin: 0;
+
   }
 
   .menu li {
@@ -139,6 +140,7 @@ header {
     text-decoration: none;
     font-size: 12px;
     padding: 30px 0px;
+    
     /* Adjusted padding */
     margin: 0;
     /* Reset margin */
@@ -216,8 +218,8 @@ header {
     transform: rotate(3deg); /* Rotate the image by -20 degrees */
     border-bottom-right-radius: 1rem;
     border-top-left-radius: 1rem;
-    width: 125px;
-    height: 125px;
+    width: 7rem;
+    height: 7rem;
     animation: glow 1.5s infinite alternate; /* Glowing animation */
   }
 
@@ -227,8 +229,8 @@ header {
     transform: rotate(-3deg); /* Rotate the image by -20 degrees */
     border-bottom-right-radius: 1rem;
     border-top-left-radius: 1rem;
-    width: 135px;
-    height: 135px;
+    width: 7rem;
+    height: 7rem;
     animation: glow 1.5s infinite alternate; /* Glowing animation */
   }
 
@@ -239,8 +241,8 @@ header {
     transform: rotate(-3deg); /* Rotate the image by -20 degrees */
     border-bottom-right-radius: 1rem;
     border-top-left-radius: 1rem;
-    width: 125px;
-    height: 125px;
+    width: 7rem;
+    height: 7rem;
     animation: glow 1.5s infinite alternate; /* Glowing animation */
   }
 
@@ -250,8 +252,8 @@ header {
     transform: rotate(-4deg); /* Rotate the image by -20 degrees */
     border-bottom-right-radius: 1rem;
     border-top-left-radius: 1rem;
-    width: 125px;
-    height: 125px;
+    width: 7.5rem;
+    height: 7rem;
     animation: glow 1.5s infinite alternate; /* Glowing animation */
   }
 
