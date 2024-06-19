@@ -94,8 +94,6 @@ footer {
 }
 
 header {
-  border-bottom-left-radius: 0.3rem;
-  border-bottom-right-radius: 0.3rem;
   width: 100%;
   background-color: #1e293bfa;
   color: whitesmoke;
@@ -112,6 +110,16 @@ header {
 /* || SMALL SCREEN ---------------------------------------------------MOBILE*/
 @media screen and (min-width: 320px) {
 
+  header {
+    border-radius: 0.1rem;
+    width: 100%;
+    background-color: #1e293bfa;
+    color: whitesmoke;
+    font-size: 0.7rem;
+    font-weight: 450;
+    height: 6rem;
+    box-shadow: 0px 5px 5px 0px rgba(86, 85, 85, 0.378);
+  }
 
   .menu {
     list-style-type: none;
@@ -136,9 +144,9 @@ header {
     text-decoration: none;
     width: 100%; /* Full width of parent (.menu) */
     font-size: 0.6rem;
-    padding: 1.6rem 0; /* Adjusted padding in rems */
+    padding: 1.8rem 0; /* Adjusted padding in rems */
     margin: 0;
-    border-radius: 0.5rem;
+    border-radius: 0.3rem;
     transition: background-color 0.3s ease, border-color 0.3s ease, backdrop-filter 0.3s ease;
     background: rgba(255, 255, 255, 0.501); /* Semi-transparent background */
     color: #1c4777;
@@ -205,6 +213,7 @@ header {
     display: grid;
     place-items: center;
     height: 15vh;
+    padding: 1rem 2rem 1rem 2rem;
     margin-bottom: 1rem;
   }
 
@@ -261,19 +270,20 @@ header {
 
 #typing-text {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 1rem;
 }
 
 .hello {
-  font-size: 0.8rem;
+  
   font-weight: bold;
   color: #1e293bfa;
 }
 .welcome {
-  font-size: 0.8rem;
+  
   color: #1e293bfa;
 }
 .projects {
-  font-size: 0.8rem;
+  
   color: #1e293bfa;
 }
 
