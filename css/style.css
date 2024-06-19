@@ -104,6 +104,10 @@ header {
 }
 
 
+/* Hide audio element */
+#audio-typing {
+  display: none;
+}
 
 
 
