@@ -5,24 +5,23 @@
   box-sizing: border-box;
 }
 
-@font-face {
-  font-family: 'typed';
-  src: url('fonts/typed') format('truetype');
-  /* Modern Browsers */
-}
 
-
-/* || COMMON STYLES */
-body {
+body,html {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   background:
-    linear-gradient(185deg, #f9f4f9, #ece0d2);
-  /* Left to right gradient */
+    linear-gradient(185deg, #eef8f4, #f1e9e0);
+    width: 100%;
+    overflow-x: hidden;
 }
 
 
 main {
+  min-height: 100vh;
   height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Ensure content is spaced appropriately */
 }
 
 
@@ -80,27 +79,29 @@ footer {
   display: grid;
   place-content: center;
   text-align: center;
+  width: 100%;
+  flex-shrink: 0;
 }
 
 footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
   background-color: #1e293b;
   color: whitesmoke;
-  /* Apply gradient shadow effect */
-  box-shadow: inset 0px 8px 10px -10px rgba(0, 0, 0, 0.8),
-    /* Inner shadow */
-    0px -8px 10px -10px rgba(0, 0, 0, 0.8);
-  /* Top shadow */
+  box-shadow: inset 0px 8px 10px -10px rgba(0, 0, 0, 0.8), 0px -8px 10px -10px rgba(0, 0, 0, 0.8);
 }
 
 header {
   border-bottom-left-radius: 0.3rem;
   border-bottom-right-radius: 0.3rem;
+  width: 100%;
   background-color: #1e293bfa;
   color: whitesmoke;
   font-size: 0.7rem;
   font-weight: 450;
   height: 6rem;
-  position: inherit;
   box-shadow: 0px 5px 5px 0px rgba(86, 85, 85, 0.378);
 }
 
@@ -109,60 +110,54 @@ header {
 
 
 /* || SMALL SCREEN ---------------------------------------------------MOBILE*/
-@media screen and (min-width: 76px) {
+@media screen and (min-width: 320px) {
 
 
   .menu {
     list-style-type: none;
+    display: unset;
     position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
     display: flex;
     justify-content: space-around;
-    padding: 0;
+    padding: 0rem 0; /* Adjusted padding in rems */
     margin: 0;
-
+    box-shadow: 0px -0.125rem 0.625rem rgba(0, 0, 0, 0.1); /* Optional: Add shadow for depth */
+    z-index: 1; /* Ensure the menu is above other content */
   }
-
+  
   .menu li {
-    margin: 0;
-    font-weight: 500;
-    flex-grow: 1;
-    /* Distribute space evenly */
+    flex: 1; /* Distribute available space equally among li items */
   }
-
-  /* .menu li:first-child {
-    display: none !important;
-  } */
-
+  
   .menu li a {
     text-decoration: none;
-    font-size: 12px;
-    padding: 30px 0px;
-    
-    /* Adjusted padding */
+    width: 100%; /* Full width of parent (.menu) */
+    font-size: 0.6rem;
+    padding: 1.6rem 0; /* Adjusted padding in rems */
     margin: 0;
-    /* Reset margin */
-    border-radius: 5px;
-    transition: background-color 0.3s ease, border-color 0.3s ease;
-    background: linear-gradient(to top, rgba(234, 234, 234, 0.7), rgba(255, 255, 255, 0.7)),
-      linear-gradient(to bottom, rgba(219, 219, 219, 0.7), rgba(255, 255, 255, 0.7));
+    border-radius: 0.5rem;
+    transition: background-color 0.3s ease, border-color 0.3s ease, backdrop-filter 0.3s ease;
+    background: rgba(255, 255, 255, 0.501); /* Semi-transparent background */
     color: #1c4777;
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid #5c5c5c;
+    border: 0.0625rem solid #5c5c5c; /* Border in rems (1px equivalent) */
     border-bottom-left-radius: 0.1rem;
     border-bottom-right-radius: 0.1rem;
+    backdrop-filter: blur(0.8rem); /* 10px blur effect in rems */
+    -webkit-backdrop-filter: blur(0.8rem); /* For Safari */
   }
-
-
+  
   .menu li a:hover {
-    background: linear-gradient(to right, #598dc7, #7fb0e1);
-    color: white;
+    background: rgba(255, 255, 255, 0.6); /* Slightly less transparent on hover */
+    border-color: #1c4777; /* Change border color on hover */
     transform: scale(1.01);
   }
+  
 
 
   .logo {
@@ -170,7 +165,7 @@ header {
     justify-content: center;
     margin-top: 0.2rem;
     margin-bottom: 0;
-    max-width: 100%;
+    width: 100%;
   }
 
   header {
@@ -263,6 +258,38 @@ header {
 }
 
 
+
+#typing-text {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.hello {
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: #1e293bfa;
+}
+.welcome {
+  font-size: 0.8rem;
+  color: #1e293bfa;
+}
+.projects {
+  font-size: 0.8rem;
+  color: #1e293bfa;
+}
+
+.cursor {
+  border-left: 2px solid rgb(61, 203, 213);
+  animation: blink 0.7s step-end infinite;
+  width: 0.1em;
+  height: 1.2em;
+  margin-left: 0.1rem;
+  background-color: rgb(255, 4, 226);
+}
+
+@keyframes blink {
+  from, to { border-color: transparent }
+  50% { border-color: rgb(30, 88, 196) }
+}
   
   @keyframes glow {
     from {
@@ -324,15 +351,6 @@ header {
     font-family: 'Times New Roman', Times, serif;
   }
 
-  .cursor {
-    display: inline-block;
-    vertical-align: middle;
-    width: 0.1em;
-    height: 1.1em;
-    margin-left: 0.1rem;
-    background-color: rgb(255, 4, 226);
-    animation: blink-caret 0.75s infinite;
-  }
 
   h6 {
     font-size: 0.8rem;
@@ -418,12 +436,11 @@ header {
 
   .menu li a {
     text-decoration: none;
-    font-size: 16px;
-    padding: 25px 0;
+    font-size: 1rem; /* 16px */
+    padding: 1.7rem 0; /* 25px */
     border-radius: 0.5rem;
-    transition: background-color 0.3s ease, border-color 0.3s ease;
-    background: linear-gradient(to top, rgba(234, 234, 234, 0.7), rgba(255, 255, 255, 0.7)),
-      linear-gradient(to bottom, rgba(219, 219, 219, 0.7), rgba(255, 255, 255, 0.7));
+    transition: background-color 0.3s ease, border-color 0.3s ease, backdrop-filter 0.3s ease;
+    background: rgba(255, 255, 255, 0.575); /* Semi-transparent background */
     color: #1c4777;
     display: flex;
     justify-content: center;
@@ -431,8 +448,9 @@ header {
     border: 1px solid #5c5c5c;
     border-bottom-left-radius: 0.1rem;
     border-bottom-right-radius: 0.1rem;
+    backdrop-filter: blur(0.8rem); /* 10px blur effect in rems */
+    -webkit-backdrop-filter: blur(0.8rem); /* For Safari */
   }
-
   .menu li a:hover {
     background: linear-gradient(to right, #598dc7, #7fb0e1);
     color: white;
@@ -446,9 +464,10 @@ header {
   }
 
   .container3 {
-    display: grid;
+    display: block;
     place-items: center;
-    height: 15vh;
+    padding: 1rem;
+    
   }
 
   .container2 {
@@ -529,6 +548,38 @@ display: unset;
   transform: rotate(0deg); /* Rotate the image to 0 degrees (straight) */
 }
 
+
+#typing-text {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.hello {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #1e293bfa;
+}
+.welcome {
+  font-size: 1.5rem;
+  color: #1e293bfa;
+}
+.projects {
+  font-size: 1.5rem;
+  color: #1e293bfa;
+}
+
+.cursor {
+  border-left: 2px solid rgb(61, 203, 213);
+  animation: blink 0.7s step-end infinite;
+  width: 0.1em;
+  height: 1.2em;
+  margin-left: 0.1rem;
+  background-color: rgb(255, 4, 226);
+}
+
+@keyframes blink {
+  from, to { border-color: transparent }
+  50% { border-color: rgb(30, 88, 196) }
+}
 
 
 @keyframes glow {
@@ -620,15 +671,7 @@ display: unset;
     font-family: 'Times New Roman', Times, serif;
   }
 
-  .cursor {
-    display: inline-block;
-    vertical-align: middle;
-    width: 0.1em;
-    height: 1.1em;
-    margin-left: 0.1rem;
-    background-color: rgb(255, 4, 226);
-    animation: blink-caret 0.75s infinite;
-  }
+
 
   h6 {
     font-size: 2rem;
@@ -665,28 +708,5 @@ display: unset;
 
 
   /* Reset styles for MOBILE DEVICE LANDSCAPE */
-}
-
-
-.cursor {
-  display: inline-block;
-  vertical-align: middle;
-  width: 0.1em;
-  height: 1.1em;
-  margin-left: 0.1rem;
-  background-color: rgb(255, 4, 226);
-  animation: blink-caret 0.75s infinite;
-}
-
-@keyframes blink-caret {
-
-  0%,
-  100% {
-    opacity: 1;
-  }
-
-  50% {
-    opacity: 0;
-  }
 }
 
