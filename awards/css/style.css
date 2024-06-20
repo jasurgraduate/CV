@@ -1,0 +1,312 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background: linear-gradient(185deg, #eef8f4, #f1e9e0);
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* Layout */
+main {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header, footer {
+    width: 100%;
+    background-color: #1e293bfa;
+    color: whitesmoke;
+    text-align: center;
+    padding: 1.5rem;
+    box-shadow: 0px 5px 5px 0px rgba(86, 85, 85, 0.378);
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    margin-top: 0.2rem;
+    margin-bottom: 0;
+    max-width: 100%;
+}
+
+/* Gallery Styles */
+.gallery {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 5rem;
+    margin-top: -2rem;
+}
+
+.award {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    margin: 2rem 0;
+    width: 90%;
+    max-width: 75rem; /* Adjusted to 1200px in rem units */
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 1rem;
+    box-shadow: 0px 1rem 2rem 0 rgba(0,0,0,0.2);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.award:hover {
+    transform: scale(1.02);
+}
+
+.award-image {
+    width: 100%;
+    max-width: 25rem; /* Adjusted size in rems */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 25rem;
+    object-fit: contain; /* Maintain aspect ratio within the container */
+}
+
+
+.award-description {
+    padding: 1rem;
+    text-align: left;
+    flex: 1;
+}
+
+.award-description h2 {
+    font-size: 1.5rem;
+    color: #1e293b;
+    margin-bottom: 1rem;
+}
+
+.award-description p {
+    font-size: 1rem;
+    color: #1e293b;
+    line-height: 1.5;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 6.25rem; /* Adjusted to 100px in rem units */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.9);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 43.75rem; /* Adjusted to 700px in rem units */
+}
+
+.close {
+    position: absolute;
+    top: 1.875rem; /* Adjusted to 15px in rem units */
+    right: 2.1875rem; /* Adjusted to 35px in rem units */
+    color: #f1f1f1;
+    font-size: 2.5rem; /* Adjusted to 40px in rem units */
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 43.75rem; /* Adjusted to 700px in rem units */
+    text-align: center;
+    color: #ccc;
+    padding: 0.625rem 0; /* Adjusted to 10px in rem units */
+    height: 9.375rem; /* Adjusted to 150px in rem units */
+}
+
+.modal-content, #caption {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+}
+
+/* Responsive Design -------------------------------------------------------------------------MOBILE */
+@media screen and (min-width: 20rem) { /* Adjusted min-width to 320px in rem units */
+    .award {
+        flex-direction: column;
+    }
+
+    .menu {
+        list-style-type: none;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        padding: 0;
+        margin: 0;
+    }
+
+    .menu li {
+        margin: 0;
+        font-weight: bold;
+        flex-grow: 1;
+    }
+
+    .menu li a {
+        text-decoration: none;
+        font-size: 0.7rem;
+        padding: 1.7rem 0;
+        border-radius: 0.5rem;
+        transition: background-color 0.3s ease, border-color 0.3s ease, backdrop-filter 0.3s ease;
+        background: rgba(255, 255, 255, 0.575);
+        color: #1c4777;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 0.0625rem solid #5c5c5c; /* Adjusted to 1px in rem units */
+        border-bottom-left-radius: 0.1rem;
+        border-bottom-right-radius: 0.1rem;
+        backdrop-filter: blur(0.8rem);
+        -webkit-backdrop-filter: blur(0.8rem);
+    }
+
+    .menu li a:hover {
+        background: linear-gradient(to right, #598dc7, #7fb0e1);
+        color: white;
+        transform: scale(1.01);
+    }
+
+    .award-description p {
+        font-size: 1rem;
+    }
+
+    #confettiButton {
+        cursor: pointer;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    #confettiButton:hover {
+        transform: scale(2.5);
+    }
+
+    .party-icon {
+        width: 1.7rem;
+        height: 1.7rem;
+        display: block;
+    }
+    
+}
+
+/* Responsive Design -----------------------------------------------------------------TABLET AND DESKTOP*/
+@media screen and (min-width: 48rem) { /* Adjusted min-width to 768px in rem units */
+    .award {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .award-image {
+        width: 100%;
+        height: 100%;
+    }
+
+    .award-description {
+        width: 50%;
+        padding: 2rem;
+        flex-grow: 1;
+    }
+
+    .gallery {
+        flex-direction: column;
+    }
+
+    main {
+        padding: 4rem;
+    }
+
+    .menu {
+        list-style-type: none;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        padding: 0;
+        margin: 0;
+    }
+
+    .menu li {
+        margin: 0;
+        font-weight: bold;
+        flex-grow: 1;
+    }
+
+    .menu li a {
+        text-decoration: none;
+        font-size: 1rem;
+        padding: 1.7rem 0;
+        border-radius: 0.5rem;
+        transition: background-color 0.3s ease, border-color 0.3s ease, backdrop-filter 0.3s ease;
+        background: rgba(255, 255, 255, 0.575);
+        color: #1c4777;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 0.0625rem solid #5c5c5c; /* Adjusted to 1px in rem units */
+        border-bottom-left-radius: 0.1rem;
+        border-bottom-right-radius: 0.1rem;
+        backdrop-filter: blur(0.8rem);
+        -webkit-backdrop-filter: blur(0.8rem);
+    }
+
+    .menu li a:hover {
+        background: linear-gradient(to right, #598dc7, #7fb0e1);
+        color: white;
+        transform: scale(1.01);
+    }
+
+    .award-description p {
+        font-size: 1.2rem;
+    }
+
+    #confettiButton {
+        cursor: pointer;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    #confettiButton:hover {
+        transform: scale(2.5);
+    }
+}
