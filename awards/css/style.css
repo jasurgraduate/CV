@@ -167,44 +167,48 @@ footer {
 
     .menu {
         list-style-type: none;
+        display: unset;
         position: fixed;
         bottom: 0;
         left: 0;
         width: 100%;
         display: flex;
         justify-content: space-around;
-        padding: 0;
+        padding: 0rem 0; /* Adjusted padding in rems */
         margin: 0;
-    }
-
-    .menu li {
-        margin: 0;
-        flex-grow: 1;
-    }
-
-    .menu li a {
+        box-shadow: 0px -0.125rem 0.625rem rgba(0, 0, 0, 0.1); /* Optional: Add shadow for depth */
+        z-index: 1; /* Ensure the menu is above other content */
+      }
+      
+      .menu li {
+        flex: 1; /* Distribute available space equally among li items */
+      }
+      
+      .menu li a {
         text-decoration: none;
+        width: 100%; /* Full width of parent (.menu) */
         font-size: 0.6rem;
-        padding: 1.7rem 0;
-        border-radius: 0.5rem;
+        padding: 1.8rem 0; /* Adjusted padding in rems */
+        margin: 0;
+        border-radius: 0.3rem;
         transition: background-color 0.3s ease, border-color 0.3s ease, backdrop-filter 0.3s ease;
-        background: rgba(255, 255, 255, 0.575);
+        background: rgba(255, 255, 255, 0.501); /* Semi-transparent background */
         color: #1c4777;
         display: flex;
         justify-content: center;
         align-items: center;
-        border: 0.0625rem solid #5c5c5c; /* Adjusted to 1px in rem units */
+        border: 0.0625rem solid #5c5c5c; /* Border in rems (1px equivalent) */
         border-bottom-left-radius: 0.1rem;
         border-bottom-right-radius: 0.1rem;
-        backdrop-filter: blur(0.8rem);
-        -webkit-backdrop-filter: blur(0.8rem);
-    }
-
-    .menu li a:hover {
-        background: linear-gradient(to right, #598dc7, #7fb0e1);
-        color: white;
-        transform: scale(1.01);
-    }
+        backdrop-filter: blur(0.8rem); /* 10px blur effect in rems */
+        -webkit-backdrop-filter: blur(0.8rem); /* For Safari */
+      }
+      
+      .menu li a:hover {
+        background: rgba(255, 255, 255, 0.6); /* Slightly less transparent on hover */
+        border-color: #1c4777; /* Change border color on hover */
+        transform: scale(1.0);
+      }
 
     .award-description p {
         font-size: 1rem;
@@ -254,47 +258,45 @@ footer {
     }
 
     .menu {
-        list-style-type: none;
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        display: flex;
-        justify-content: space-around;
-        padding: 0;
-        margin: 0;
-    }
+    list-style-type: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
+  }
 
-    .menu li {
-        margin: 0;
-        font-weight: bold;
-        flex-grow: 1;
-    }
+  .menu li {
+    margin: 0;
+    font-weight: bold;
+    flex-grow: 1;
+  }
 
-    .menu li a {
-        text-decoration: none;
-        font-size: 1rem;
-        padding: 1.7rem 0;
-        border-radius: 0.5rem;
-        transition: background-color 0.3s ease, border-color 0.3s ease, backdrop-filter 0.3s ease;
-        background: rgba(255, 255, 255, 0.575);
-        color: #1c4777;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border: 0.0625rem solid #5c5c5c; /* Adjusted to 1px in rem units */
-        border-bottom-left-radius: 0.1rem;
-        border-bottom-right-radius: 0.1rem;
-        backdrop-filter: blur(0.8rem);
-        -webkit-backdrop-filter: blur(0.8rem);
-    }
-
-    .menu li a:hover {
-        background: linear-gradient(to right, #598dc7, #7fb0e1);
-        color: white;
-        transform: scale(1.01);
-    }
-
+  .menu li a {
+    text-decoration: none;
+    font-size: 1rem; /* 16px */
+    padding: 1.7rem 0; /* 25px */
+    border-radius: 0.5rem;
+    transition: background-color 0.3s ease, border-color 0.3s ease, backdrop-filter 0.3s ease;
+    background: rgba(255, 255, 255, 0.575); /* Semi-transparent background */
+    color: #1c4777;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #5c5c5c;
+    border-bottom-left-radius: 0.1rem;
+    border-bottom-right-radius: 0.1rem;
+    backdrop-filter: blur(0.8rem); /* 10px blur effect in rems */
+    -webkit-backdrop-filter: blur(0.8rem); /* For Safari */
+  }
+  .menu li a:hover {
+    background: linear-gradient(to right, #598dc7, #7fb0e1);
+    color: white;
+    transform: scale(1.0);
+  }
     .award-description p {
         font-size: 1.2rem;
     }
