@@ -224,8 +224,8 @@ header {
     transform: rotate(3deg); /* Rotate the image by 3 degrees */
     border-bottom-right-radius: 1rem;
     border-top-left-radius: 1rem;
-    width: 19rem;
-    height: 19rem;
+    width: 17rem;
+    height: 17rem;
     animation: glow 1.5s infinite alternate; /* Glowing animation */
     border: 0rem solid white; /* White border with 1 rem size */
     cursor: grab;
