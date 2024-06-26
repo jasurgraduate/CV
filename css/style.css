@@ -200,6 +200,8 @@ header {
     font-weight: normal;
   }
 
+  
+
   .container2 {
     list-style-type: none;
     margin-top: 3rem;
@@ -219,16 +221,18 @@ header {
 
   .profile-pic {
     transition: transform 0.3s ease-in-out;
-    transform: rotate(3deg); /* Rotate the image by -20 degrees */
+    transform: rotate(3deg); /* Rotate the image by 3 degrees */
     border-bottom-right-radius: 1rem;
     border-top-left-radius: 1rem;
-    width: 7rem;
-    height: 7rem;
+    width: 19rem;
+    height: 19rem;
     animation: glow 1.5s infinite alternate; /* Glowing animation */
-  }
+    border: 0rem solid white; /* White border with 1 rem size */
+    cursor: grab;
+}
 
   .profile-pic:nth-of-type(1) {
-
+    display: none;
     transition: transform 0.3s ease-in-out;
     transform: rotate(-3deg); /* Rotate the image by -20 degrees */
     border-bottom-right-radius: 1rem;
@@ -251,7 +255,7 @@ header {
   }
 
   .profile-pic:nth-of-type(3) {
-
+    display: none;
     transition: transform 0.3s ease-in-out;
     transform: rotate(-4deg); /* Rotate the image by -20 degrees */
     border-bottom-right-radius: 1rem;
@@ -511,6 +515,7 @@ header {
 
 
 .profile-pic {
+  display: unset;
   transition: transform 0.3s ease-in-out;
   transform: rotate(3deg); /* Rotate the image by -20 degrees */
   border-bottom-right-radius: 1rem;
@@ -518,9 +523,11 @@ header {
   width: 290px;
   height: 290px;
   animation: glow 1.5s infinite alternate; /* Glowing animation */
+  cursor: grab;
 }
 
 .profile-pic:nth-of-type(1) {
+  display: unset;
 
   transition: transform 0.3s ease-in-out;
   transform: rotate(-3deg); /* Rotate the image by -20 degrees */
@@ -529,6 +536,7 @@ header {
   width: 275px;
   height: 275px;
   animation: glow 1.5s infinite alternate; /* Glowing animation */
+  cursor: grab;
 }
 
 .profile-pic:nth-of-type(2) {
@@ -540,10 +548,11 @@ display: unset;
   width: 275px;
   height: 275px;
   animation: glow 1.5s infinite alternate; /* Glowing animation */
+  cursor: grab;
 }
 
 .profile-pic:nth-of-type(3) {
-
+  display: unset;
   transition: transform 0.3s ease-in-out;
   transform: rotate(-4deg); /* Rotate the image by -20 degrees */
   border-bottom-right-radius: 1rem;
@@ -551,6 +560,7 @@ display: unset;
   width: 295px;
   height: 285px;
   animation: glow 1.5s infinite alternate; /* Glowing animation */
+  cursor: grab;
 }
 
 
