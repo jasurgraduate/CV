@@ -1,9 +1,11 @@
 document.addEventListener("DOMContentLoaded", function() {
-  const text = "Hello ツ\nWelcome to my personal website!\nHere you can see my personal projects and read my blogs ☺";
+  const text = "Hello ツ\nWelcome to my personal website!\nHere you can see my personal projects and read my blogs \uD83D\uDC3C";
+
+
   const styleMap = {
     "Hello ツ": "hello",
     "Welcome to my personal website!": "welcome",
-    "Here you can see my personal projects and read my blogs ☺": "projects"
+    "Here you can see my personal projects and read my blogs \uD83D\uDC3C": "projects"
   };
 
   function typeWriter(text, i = 0) {
