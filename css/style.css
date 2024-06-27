@@ -113,7 +113,7 @@ header {
   max-width: 90%; /* Adjust max-width as needed */
   height: 3rem; /* Adjust height as needed */
   background-color: #f9c0c0; /* Futuristic teal color */
-  border-radius: 1.5rem;
+  border-radius: 1rem;
   overflow: hidden;
 }
 
