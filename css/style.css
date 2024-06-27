@@ -221,13 +221,13 @@ header {
 
   .profile-pic {
     transition: transform 0.3s ease-in-out;
-    transform: rotate(3deg); /* Rotate the image by 3 degrees */
+    transform: rotate(0deg); /* Rotate the image by 3 degrees */
     border-bottom-right-radius: 1rem;
     border-top-left-radius: 1rem;
     width: 17rem;
     height: 17rem;
     animation: glow 1.5s infinite alternate; /* Glowing animation */
-    border: 0rem solid white; /* White border with 1 rem size */
+    border: 1.5px solid white; /* White border with 1 rem size */
     cursor: grab;
 }
 
@@ -516,6 +516,7 @@ header {
 
 .profile-pic {
   display: unset;
+  list-style-type: none;
   transition: transform 0.3s ease-in-out;
   transform: rotate(3deg); /* Rotate the image by -20 degrees */
   border-bottom-right-radius: 1rem;
@@ -524,6 +525,7 @@ header {
   height: 290px;
   animation: glow 1.5s infinite alternate; /* Glowing animation */
   cursor: grab;
+  border: 0px solid white; /* White border with 1 rem size */
 }
 
 .profile-pic:nth-of-type(1) {
