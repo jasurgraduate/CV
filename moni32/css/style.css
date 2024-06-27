@@ -125,7 +125,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      border: 0.0625rem solid #5c5c5c; /* Border in rems (1px equivalent) */
+      border: 1px solid rgba(92, 92, 92, 0.5); /* 5% opacity */
       border-bottom-left-radius: 0.1rem;
       border-bottom-right-radius: 0.1rem;
       backdrop-filter: blur(0.8rem); /* 10px blur effect in rems */
@@ -272,7 +272,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      border: 1px solid #5c5c5c;
+      border: 1px solid rgba(92, 92, 92, 0.5); /* 5% opacity */
       border-bottom-left-radius: 0.1rem;
       border-bottom-right-radius: 0.1rem;
       backdrop-filter: blur(0.8rem); /* 10px blur effect in rems */
