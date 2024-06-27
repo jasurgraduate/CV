@@ -1,12 +1,13 @@
 document.addEventListener("DOMContentLoaded", function() {
   const text = "Hello ツ\nWelcome to my personal website!\nHere you can see my personal projects and read my blogs \uD83D\uDC3C";
 
-
   const styleMap = {
     "Hello ツ": "hello",
     "Welcome to my personal website!": "welcome",
     "Here you can see my personal projects and read my blogs \uD83D\uDC3C": "projects"
   };
+
+  let sevenCount = 0; // To count consecutive '7' key presses
 
   function typeWriter(text, i = 0) {
     // Add cursor at the start
@@ -76,6 +77,19 @@ document.addEventListener("DOMContentLoaded", function() {
 
     typeNextChar();
   }
+
+  // Event listener for key presses
+  document.addEventListener('keydown', function(event) {
+    if (event.key === '7') {
+      sevenCount++;
+      if (sevenCount === 3) {
+        // Open /moni32 page in current tab
+        window.location.href = '/moni32';
+      }
+    } else {
+      sevenCount = 0; // Reset count if key pressed is not '7'
+    }
+  });
 
   // Call typeWriter function on page load
   typeWriter(text);
