@@ -40,8 +40,7 @@ footer {
 .logo {
     display: flex;
     justify-content: center;
-    margin-top: 0.2rem;
-    margin-bottom: 0;
+    margin: 0.3rem;
     max-width: 100%;
 }
 
