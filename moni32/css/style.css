@@ -160,7 +160,7 @@
   
   
     h2 {
-        margin: 1rem;
+    margin: 1rem;
       padding: 0.5rem;
       align-items: center;
       justify-content: center;
@@ -170,7 +170,7 @@
     
 
     .btn {
-        width: 30rem;
+        width: 20rem;
         font-size: 1.1rem;
         padding: 1.5rem 1.5rem;
         border-radius: 0.1rem;
@@ -180,7 +180,8 @@
         color: #1c4777;
         display: flex;
         justify-content: flex-start;
-        border: 1px solid #5c5c5c;
+        border: 1px solid rgba(92, 92, 92, 0.5); /* 5% opacity */
+
       }
       
       .btn:hover {
@@ -230,7 +231,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        border: 1px solid #5c5c5c;
+        border: 1px solid rgba(92, 92, 92, 0.5); /* 5% opacity */
         text-align: center;
       }
       
