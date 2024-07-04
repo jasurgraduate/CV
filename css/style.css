@@ -198,6 +198,19 @@ header {
     color: white;
     transform: scale(1.0);
   }
+
+  iframe {
+    width: 100%;
+    height: 82%;
+    border: dashed rgba(128, 128, 128, 0.053) 0.1px;
+}
+
+  .container7 {
+    list-style-type: none;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+  }
   
 
 
@@ -504,10 +517,18 @@ header {
     transform: scale(1.0);
   }
 
+  iframe {
+    width: 100%;
+    height: 80%;
+    border: dashed rgba(128, 128, 128, 0.059) 0.1px;
+}
 
-
-  .container {
+  .container7 {
+    list-style-type: none;
     display: flex;
+    margin-top: 2rem;
+    width: 100%;
+    height: 100vh;
   }
 
   .container3 {
