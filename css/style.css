@@ -458,7 +458,8 @@ header {
   }
 
   .container4 {
-    margin-bottom: 2rem;
+    margin-top: -8rem;
+    margin-bottom: 4rem;
   }
 
 
@@ -774,6 +775,13 @@ display: unset;
       /* Change border color on hover */
     }
 
+    .container4 {
+      display: unset;
+      list-style-type: none;
+      margin-top: 0rem;
+      margin-bottom: 4rem;
+    }
+  
 
 
   }
