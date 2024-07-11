@@ -1,0 +1,212 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(185deg, #eef8f4, #f1e9e0);
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #1e293b;
+    color: #fff;
+    padding: 20px 0;
+}
+
+header h1, header h2 {
+    text-align: center;
+}
+
+header .contact-info {
+    text-align: center;
+    margin-top: 10px;
+}
+
+p {
+    font-size: 1rem;
+}
+
+a {
+    color: wheat;
+    text-decoration: none;
+    cursor: pointer;
+    border: 1px solid transparent;
+    padding: 0.3rem;
+    transition: border-color 0.3s ease;
+}
+
+a:hover {
+    border-color: wheat;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    margin-top: 0.2rem;
+    margin-bottom: 0;
+    width: 100%;
+}
+
+main {
+    padding: 20px 0;
+}
+
+main section {
+    margin-bottom: 20px;
+}
+
+main section h2 {
+    border-bottom: 2px solid #333;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+main section ul {
+    list-style: none;
+}
+
+main section ul li {
+    background: #fff;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.download-section {
+    text-align: center;
+    margin-bottom: 7rem;
+}
+
+.download-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #1e293b;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.download-btn:hover {
+    background: #ffffff;
+    color: #1e293b;
+    border-color: #333;
+    animation: ease-in-out;
+}
+
+footer {
+    background-color: #1e293b;
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem 0;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+}
+
+/* SMALL SCREEN --------------------------------------------------------------------------------- MOBILE */
+@media screen and (min-width: 320px) {
+
+    .menu {
+        list-style-type: none;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        padding: 0;
+        margin: 0;
+        box-shadow: 0px -0.125rem 0.625rem rgba(0, 0, 0, 0.1);
+        z-index: 1;
+    }
+
+    .menu li {
+        flex: 1;
+    }
+
+    .menu li a {
+        
+        width: 100%;
+        font-size: 0.6rem;
+        padding: 1.8rem 0;
+        margin: 0;
+        border-radius: 0.3rem;
+        transition: background-color 0.3s ease, border-color 0.3s ease, backdrop-filter 0.3s ease;
+        background: rgba(255, 255, 255, 0.501);
+        color: #1c4777;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 0.0625rem solid #5c5c5c;
+        border-bottom-left-radius: 0.1rem;
+        border-bottom-right-radius: 0.1rem;
+        backdrop-filter: blur(0.8rem);
+        -webkit-backdrop-filter: blur(0.8rem);
+    }
+
+    .menu li a:hover {
+        background: linear-gradient(to right, #598dc7, #7fb0e1);
+        color: white;
+        transform: scale(1.0);
+      }
+}
+
+/* XL SCREEN ---------------------------------------------------------------------------------- LAPTOP */
+@media screen and (min-width: 1200px) {
+    .menu {
+        list-style-type: none;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        padding: 0;
+        margin: 0;
+    }
+
+    .menu li {
+        margin: 0;
+        font-weight: bold;
+        flex-grow: 1;
+    }
+
+    .menu li a {
+        text-decoration: none;
+        font-size: 1rem;
+        padding: 1.7rem 0;
+        border-radius: 0.5rem;
+        transition: background-color 0.3s ease, border-color 0.3s ease, backdrop-filter 0.3s ease;
+        background: rgba(255, 255, 255, 0.575);
+        color: #1c4777;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #5c5c5c;
+        border-bottom-left-radius: 0.1rem;
+        border-bottom-right-radius: 0.1rem;
+        backdrop-filter: blur(0.8rem);
+        -webkit-backdrop-filter: blur(0.8rem);
+    }
+
+    .menu li a:hover {
+        background: linear-gradient(to right, #598dc7, #7fb0e1);
+        color: white;
+        transform: scale(1.0);
+    }
+}
