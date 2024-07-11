@@ -1,10 +1,10 @@
 document.addEventListener("DOMContentLoaded", function() {
-  const text = "Hello ツ\nWelcome to my personal website!\nHere you can see my personal projects and read my blogs \uD83D\uDC3C";
+  const text = "Hello ツ\nWelcome to my personal website!\nHere you can see my personal projects and read my blogs :)";
 
   const styleMap = {
     "Hello ツ": "hello",
     "Welcome to my personal website!": "welcome",
-    "Here you can see my personal projects and read my blogs \uD83D\uDC3C": "projects"
+    "Here you can see my personal projects and read my blogs :)": "projects"
   };
 
   let sevenCount = 0; // To count consecutive '7' key presses

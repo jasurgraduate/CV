@@ -4,6 +4,14 @@ document.addEventListener("DOMContentLoaded", function() {
     const content = document.getElementById('content-new');
     let currentProgress = 0;
 
+    // Check if localStorage already has a visit count stored
+    let visitCount = localStorage.getItem('visitCount');
+    if (!visitCount) {
+        visitCount = 0;
+    } else {
+        visitCount = parseInt(visitCount);
+    }
+
     function updateProgress() {
         // Increase progress by a random value between 1 to 3%
         const increment = Math.random() * 3 + 1;
@@ -31,6 +39,18 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 
-    // Start the progress animation
-    requestAnimationFrame(updateProgress);
+    // Increment visit count and update localStorage
+    visitCount++;
+    localStorage.setItem('visitCount', visitCount);
+
+    // Check if this is the fourth visit (visitCount = 4)
+    if (visitCount > 3) {
+        // Start the progress animation
+        requestAnimationFrame(updateProgress);
+    } else {
+        // If not the fourth visit, hide the progress bar
+        document.getElementById('progress-container-new').style.display = 'none';
+        content.style.opacity = '1'; // Directly show content
+        content.style.display = 'block';
+    }
 });
