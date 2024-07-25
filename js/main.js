@@ -17,6 +17,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Audio element for typing sound
     const typingSound = new Audio('typing.mp3');
+    typingSound.volume = 0.2; // Set custom volume (0.0 to 1.0)
 
     // Ensure audio is ready to play
     typingSound.load();
