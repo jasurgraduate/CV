@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UzY-Loco | Demonstration</title>
+<style>
+    body, html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #000;
+        color: #fff;
+        font-family: Arial, sans-serif;
+    }
+    .title {
+        font-size: 2.5rem;
+        margin: 20px;
+    }
+    .video-container {
+        width: 100%;
+        height: 90%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #000;
+        border: 1px solid #fff; /* Optional border */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Optional shadow */
+    }
+    .video-container iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+    .play-button {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 3rem;
+        color: white;
+        cursor: pointer;
+        display: none; /* Hide the button */
+    }
+</style>
+</head>
+<body>
+<div class="title">UzY-Loco App Demonstration Video:</div>
+<div class="video-container">
+    <iframe src="https://www.youtube.com/embed/4ke4OiO15nw?autoplay=1" allow="autoplay"></iframe>
+    <!-- If you still want to use the play button for other purposes, keep it here -->
+    <div class="play-button" onclick="playVideo()">▶</div>
+</div>
+
+<script>
+// Optional: If you want to use the play button to show/hide the video, you can use this function
+function playVideo() {
+    const iframe = document.querySelector('.video-container iframe');
+    iframe.src = 'https://www.youtube.com/embed/4ke4OiO15nw?autoplay=1';
+    document.querySelector('.play-button').style.display = 'none'; // Hide the button after clicking
+}
+</script>
+</body>
+</html>
