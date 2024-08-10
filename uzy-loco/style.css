@@ -1,0 +1,366 @@
+/* || RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body,
+html {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background:
+        linear-gradient(185deg, #eef8f4, #f1e9e0);
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+
+main {
+    width: 100%;
+    /* Full width of the viewport */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+a {
+    color: wheat;
+    text-decoration: none;
+    font-display: relative;
+    cursor: pointer;
+    border: 1px solid transparent;
+    /* Initially set border to transparent */
+    padding: 3px 15px;
+    /* Add padding for space around text */
+    transition: border-color 0.3s ease;
+    /* Add transition for smooth animation */
+}
+
+a:hover {
+    border-color: wheat;
+    /* Change border color on hover */
+}
+
+
+header,
+nav,
+footer {
+    display: grid;
+    place-content: center;
+    text-align: center;
+    width: 100%;
+    flex-shrink: 0;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #1e293b;
+    color: whitesmoke;
+    box-shadow: inset 0px 8px 10px -10px rgba(0, 0, 0, 0.8), 0px -8px 10px -10px rgba(0, 0, 0, 0.8);
+}
+
+header {
+    width: 100%;
+    background-color: #1e293b;
+    color: whitesmoke;
+    font-size: 0.7rem;
+    font-weight: 450;
+    height: 6rem;
+    box-shadow: 0px 5px 5px 0px rgba(86, 85, 85, 0.378);
+}
+
+
+
+
+/* || SMALL SCREEN ---------------------------------------------------MOBILE*/
+@media screen and (min-width: 320px) {
+
+    header {
+        border-radius: 0.1rem;
+        width: 100%;
+        background-color: #1e293b;
+        color: whitesmoke;
+        font-size: 0.7rem;
+        font-weight: 450;
+        height: 6rem;
+        box-shadow: 0px 5px 5px 0px rgba(86, 85, 85, 0.378);
+    }
+
+    .menu {
+        list-style-type: none;
+        display: unset;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        padding: 0rem 0;
+        /* Adjusted padding in rems */
+        margin: 0;
+        box-shadow: 0px -0.125rem 0.625rem rgba(0, 0, 0, 0.1);
+        /* Optional: Add shadow for depth */
+        z-index: 1;
+        /* Ensure the menu is above other content */
+    }
+
+    .menu li {
+        flex: 1;
+        /* Distribute available space equally among li items */
+    }
+
+    .menu li a {
+        text-decoration: none;
+        width: 100%;
+        /* Full width of parent (.menu) */
+        font-size: 0.6rem;
+        padding: 1.8rem 0;
+        /* Adjusted padding in rems */
+        margin: 0;
+        border-radius: 0.3rem;
+        transition: background-color 0.3s ease, border-color 0.3s ease, backdrop-filter 0.3s ease;
+        background: rgba(255, 255, 255, 0.501);
+        /* Semi-transparent background */
+        color: #1c4777;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid rgba(92, 92, 92, 0.5);
+        /* 5% opacity */
+        border-bottom-left-radius: 0.1rem;
+        border-bottom-right-radius: 0.1rem;
+        backdrop-filter: blur(0.8rem);
+        /* 10px blur effect in rems */
+        -webkit-backdrop-filter: blur(0.8rem);
+        /* For Safari */
+    }
+
+    .menu li a:hover {
+        background: linear-gradient(to right, #598dc7, #7fb0e1);
+        color: white;
+        transform: scale(1.0);
+    }
+
+
+
+    .logo {
+        display: flex;
+        justify-content: center;
+        margin-top: 0.2rem;
+        margin-bottom: 0;
+        width: 100%;
+    }
+
+    header {
+        text-align: center;
+        font-size: 0.7rem;
+    }
+
+
+    h1 {
+        font-weight: normal;
+    }
+
+
+    h2 {
+        margin: 1rem;
+        padding: 0.5rem;
+        align-items: center;
+        justify-content: center;
+        font-size: 2rem;
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        /* 4 equal columns */
+        gap: 0.2rem;
+        /* Gap between grid items */
+        margin-bottom: 10rem;
+        /* Adjust as needed */
+    }
+
+    .btn {
+        width: 20rem;
+        font-size: 1.1rem;
+        padding: 1.5rem 1.5rem;
+        border-radius: 0.1rem;
+        transition: background-color 0.3s ease, border-color 0.3s ease;
+        background: linear-gradient(to top, rgba(234, 234, 234, 0.7), rgba(255, 255, 255, 0.7)),
+            linear-gradient(to bottom, rgba(219, 219, 219, 0.7), rgba(255, 255, 255, 0.7));
+        color: #1c4777;
+        display: flex;
+        justify-content: flex-start;
+        border: 1px solid rgba(92, 92, 92, 0.5);
+        /* 5% opacity */
+
+    }
+
+    .btn:hover {
+        background: linear-gradient(to right, #598dc7, #7fb0e1);
+        color: white;
+        transform: scale(1.01);
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+        /* Optional: Add a shadow for depth */
+
+    }
+
+
+    .container {
+        margin: 2rem;
+    }
+
+
+
+
+}
+
+
+/* || XL  SCREEN ----------------------------------------------------------------------- LAPTOP */
+@media screen and (min-width: 768px) {
+
+
+    .tit {
+        font-size: 20px;
+        margin: 20px;
+    }
+
+    .video-container {
+        width: 800px;
+        /* Adjust the width as needed */
+        height: 450px;
+        /* Height for 16:9 aspect ratio */
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #000;
+        border: 1px solid #fff;
+        /* Optional border */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        /* Optional shadow */
+    }
+
+    .video-container iframe {
+        width: 100%;
+        /* Take up the full width of the container */
+        height: 100%;
+        /* Take up the full height of the container */
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        /* 4 equal columns */
+        gap: 0.2rem;
+        /* Gap between grid items */
+        margin-bottom: 10rem;
+        /* Adjust as needed */
+    }
+
+    .btn {
+        width: 100%;
+        padding: 1.6rem;
+        border-radius: 0.3rem;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        background: linear-gradient(to top, rgba(234, 234, 234, 0.7), rgba(255, 255, 255, 0.7)),
+            linear-gradient(to bottom, rgba(219, 219, 219, 0.7), rgba(255, 255, 255, 0.7));
+        color: #1c4777;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid rgba(92, 92, 92, 0.5);
+        /* 5% opacity */
+        text-align: center;
+    }
+
+    .btn:hover {
+        background: linear-gradient(to right, #598dc7, #7fb0e1);
+        color: white;
+        transform: scale(1.01);
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    }
+
+
+    .menu {
+        list-style-type: none;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        padding: 0;
+        margin: 0;
+    }
+
+    .menu li {
+        margin: 0;
+        font-weight: bold;
+        flex-grow: 1;
+    }
+
+    .menu li a {
+        text-decoration: none;
+        font-size: 1rem;
+        /* 16px */
+        padding: 1.7rem 0;
+        /* 25px */
+        border-radius: 0.5rem;
+        transition: background-color 0.3s ease, border-color 0.3s ease, backdrop-filter 0.3s ease;
+        background: rgba(255, 255, 255, 0.575);
+        /* Semi-transparent background */
+        color: #1c4777;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid rgba(92, 92, 92, 0.5);
+        /* 5% opacity */
+        border-bottom-left-radius: 0.1rem;
+        border-bottom-right-radius: 0.1rem;
+        backdrop-filter: blur(0.8rem);
+        /* 10px blur effect in rems */
+        -webkit-backdrop-filter: blur(0.8rem);
+        /* For Safari */
+    }
+
+    .menu li a:hover {
+        background: linear-gradient(to right, #598dc7, #7fb0e1);
+        color: white;
+        transform: scale(1.0);
+    }
+
+
+    .logo {
+        display: flex;
+        justify-content: center;
+        margin-top: 0.2rem;
+        margin-bottom: 0;
+        max-width: 100%;
+    }
+
+
+
+}
+
+/* || MOBILE DEVICE LANDSCAPE  */
+@media screen and (max-height: 425px) and (min-aspect-ratio: 7/4) {
+
+
+    /* Reset styles for MOBILE DEVICE LANDSCAPE */
+}
