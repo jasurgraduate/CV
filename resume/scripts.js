@@ -6,6 +6,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const passwordInput = document.getElementById('password-input');
     const cvLink = 'Jasur_Anorkulov_CV_2024.pdf'; // The CV file to be downloaded
 
+   
+    const encodedPassword = 'amFzdXIyMDI0'; // 
+
     downloadButton.addEventListener('click', (event) => {
         event.preventDefault(); // Prevent the default link behavior
         modal.style.display = 'block'; // Show the modal
@@ -17,8 +20,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     submitButton.addEventListener('click', () => {
         const password = passwordInput.value;
+        const decodedPassword = atob(encodedPassword); // 
         
-        if (password === 'jasur2024') {
+        if (password === decodedPassword) {
             // If the password is correct, create a temporary link and trigger the download
             const link = document.createElement('a');
             link.href = cvLink;
