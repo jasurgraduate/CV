@@ -68,15 +68,15 @@
 
     <script src="scripts.js"></script>
 
-    <!-- Custom Modal for Password Entry -->
-<div id="password-modal" class="modal">
-    <div class="modal-content">
-        <span class="close">&times;</span>
-        <h2>Enter Password</h2>
-        <input type="password" id="password-input" placeholder="Enter password">
-        <button id="submit-password">Submit</button>
+    <div id="password-modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <input type="password" id="password-input" placeholder="Enter password">
+            <button id="submit-password">Submit</button>
+            <div id="error-message" style="color: red; display: none;"></div> <!-- Error message container -->
+        </div>
     </div>
-</div>
+    
 
 </body>
 </html>

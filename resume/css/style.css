@@ -10,65 +10,115 @@ body {
     color: #333;
     
 }
-
 /* Modal Styles */
-.modal {
+#password-modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    z-index: 1000; /* Sit on top */
     left: 0;
     top: 0;
     width: 100%; /* Full width */
     height: 100%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
-    background-color: rgba(0,0,0,0.4); /* Black with opacity */
+    background-color: rgba(0,0,0,0.6); /* Darker background with opacity */
+    animation: fadeIn 0.4s ease-out; /* Fade-in animation */
+    display: flex; /* Use flexbox for centering */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+}
+
+/* Modal fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 .modal-content {
-    background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
-    padding: 20px;
+    background-color: #ffffff;
+    padding: 30px;
     border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
-    max-width: 500px;
-    border-radius: 10px;
-    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Soft shadow */
+    animation: scaleIn 0.3s ease-out; /* Scale-in animation */
+    position: relative; /* Position relative for close button */
+    max-width: 90%; /* Adjusted for mobile responsiveness */
+    width: 100%; /* Full width */
+    max-height: 90vh; /* Max height to prevent overflow on mobile */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+/* Modal scale-in animation */
+@keyframes scaleIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
 }
 
 .close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
+    color: #666;
+    font-size: 32px;
     font-weight: bold;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .close:hover,
 .close:focus {
-    color: black;
+    color: #333;
+    transform: scale(1.2); /* Slightly enlarge on hover */
     text-decoration: none;
-    cursor: pointer;
 }
 
 #password-input {
-    width: calc(100% - 22px); /* Full width minus padding */
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    width: 100%; /* Full width */
+    padding: 12px;
+    margin: 12px 0;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    font-size: 16px;
 }
 
 #submit-password {
-    padding: 10px 20px;
+    padding: 12px 24px;
     background-color: #4CAF50;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    font-size: 16px;
 }
 
 #submit-password:hover {
     background-color: #45a049;
+    transform: translateY(-4px); /* More noticeable lift on hover */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Add shadow on hover */
 }
+
+#submit-password:active {
+    transform: translateY(0); /* Reset lift on click */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* Reduce shadow on click */
+}
+
+/* Error message styling */
+#error-message {
+    margin-top: 15px;
+    color: #d9534f;
+    font-size: 16px;
+    opacity: 0;
+    animation: fadeInMessage 0.3s ease-out forwards; /* Fade-in animation for error message */
+}
+
+/* Error message fade-in animation */
+@keyframes fadeInMessage {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+
 
 
 header {
