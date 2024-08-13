@@ -5,9 +5,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const submitButton = document.getElementById('submit-password');
     const passwordInput = document.getElementById('password-input');
     const modalMessage = document.getElementById('modal-message');
-    
+
+    //
     const encodedPassword = 'amFzdXIyMDI0'; // 
-    const encodedFileUrl = 'aHR0cHM6Ly93d3cubWVkaWFmaXJlLmNvbS9maWxlL2YyNHF5bXBzNGRhZTU4NS9VenktTG9jby12NS4wX18xX05FV19JbnRlZmFjZS5yYXI='; //
+    const encodedFileUrl = 'aHR0cHM6Ly93d3cubWVkaWFmaXJlLmNvbS9maWxlL2Fw' +
+                            'cTJ5eTFybHBuMml4eS9VekEtTG9jby12NS4xLS1MQk9mS2dUUmFSLmFy'; // 
+
+    // 
+    const correctPassword = atob(encodedPassword);
+    const fileUrl = atob(encodedFileUrl);
 
     downloadButton.addEventListener('click', (event) => {
         event.preventDefault(); // Prevent the default link behavior
@@ -32,11 +38,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function handlePasswordSubmission() {
         const password = passwordInput.value;
-        const decodedPassword = atob(encodedPassword); 
-        const fileUrl = atob(encodedFileUrl); 
 
-        if (password === decodedPassword) {
-            // If the password is correct, redirect to the decoded file URL
+        if (password === correctPassword) {
+            // If the password is correct, redirect to the file URL
             window.location.href = fileUrl;
             modal.style.display = 'none'; // Hide the modal after download
         } else {
