@@ -80,23 +80,32 @@ header {
 
 /* Modal Styles */
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgba(0,0,0,0.4); /* Black with opacity */
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black with opacity */
 }
 
 .modal-content {
     background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
+    margin: 15% auto;
+    /* 15% from the top and centered */
     padding: 20px;
     border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
+    width: 80%;
+    /* Could be more or less, depending on screen size */
     max-width: 500px;
     border-radius: 10px;
     text-align: center;
@@ -117,7 +126,8 @@ header {
 }
 
 #password-input {
-    width: calc(100% - 22px); /* Full width minus padding */
+    width: calc(100% - 22px);
+    /* Full width minus padding */
     padding: 10px;
     margin: 10px 0;
     border: 1px solid #ccc;
@@ -141,7 +151,7 @@ header {
 
 
 /* || SMALL SCREEN ---------------------------------------------------MOBILE*/
-@media screen and (min-width: 320px) {
+@media screen and (max-width: 900px) {
 
     header {
         border-radius: 0.1rem;
@@ -152,6 +162,28 @@ header {
         font-weight: 450;
         height: 6rem;
         box-shadow: 0px 5px 5px 0px rgba(86, 85, 85, 0.378);
+    }
+
+    .tit {
+        font-size: 20px;
+        margin: 20px;
+    }
+
+    .modal-content {
+        margin: 5% auto;
+        /* Less margin on smaller screens */
+        width: 95%;
+        /* Wider width on smaller screens */
+    }
+
+    .close {
+        font-size: 20px;
+        /* Further reduce font size */
+    }
+
+    #submit-password {
+        width: 100%;
+        /* Full width button on mobile */
     }
 
     .menu {
@@ -236,17 +268,30 @@ header {
         align-items: center;
         justify-content: center;
         font-size: 2rem;
-        font-family: 'Times New Roman', Times, serif;
+        font-family: 'Trebuchet MS', Times, serif;
     }
 
-    .grid-container {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        /* 4 equal columns */
-        gap: 0.2rem;
-        /* Gap between grid items */
+    /* Flexbox Container */
+    .flex-container {
+        display: flex;
+        flex-direction: column;
+        /* Stacks items vertically */
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        /* Gap between flex items */
         margin-bottom: 10rem;
         /* Adjust as needed */
+        width: 70%;
+        font-size: 12px;
+    }
+
+    /* Flex Items */
+    .flex-item {
+        flex: 1;
+        /* Grow to fill available space */
+        min-width: 0;
+        /* Allow items to shrink */
     }
 
     .btn {
@@ -276,7 +321,7 @@ header {
 
 
     .container {
-        margin: 2rem;
+        margin: 0;
     }
 
 
@@ -286,7 +331,7 @@ header {
 
 
 /* || XL  SCREEN ----------------------------------------------------------------------- LAPTOP */
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 900px) {
 
 
     .tit {
@@ -321,16 +366,32 @@ header {
         justify-content: center;
     }
 
+    h2 {
+        margin: 2rem;
+    }
 
-
-    .grid-container {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        /* 4 equal columns */
-        gap: 0.2rem;
-        /* Gap between grid items */
+    /* Flexbox Container */
+    .flex-container {
+        display: flex;
+        flex-direction: column;
+        /* Stacks items vertically */
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        /* Gap between flex items */
         margin-bottom: 10rem;
         /* Adjust as needed */
+        width: 50%;
+        font-size: 20px;
+    }
+
+    /* Flex Items */
+    .flex-item {
+        flex: 1;
+        /* Grow to fill available space */
+        min-width: 0;
+        /* Allow items to shrink */
+
     }
 
     .btn {
@@ -416,11 +477,4 @@ header {
 
 
 
-}
-
-/* || MOBILE DEVICE LANDSCAPE  */
-@media screen and (max-height: 425px) and (min-aspect-ratio: 7/4) {
-
-
-    /* Reset styles for MOBILE DEVICE LANDSCAPE */
 }
