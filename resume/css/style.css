@@ -256,6 +256,26 @@ footer {
         margin-top: 10px;
     }
 
+    .download-btn {
+        display: inline-block;
+        padding: 15px 40px;
+        font-size: 20px;
+        background-color: #1e293b;
+        color: #ffffff;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background 0.3s;
+        
+    }
+    
+    .download-btn:hover {
+        background: #ffffff;
+        color: #1e293b;
+        border-color: #333;
+        animation: ease-in-out;
+        
+    }
+
     .myimg {
         margin: 0;
         display: flex;
@@ -267,6 +287,8 @@ footer {
     .myimg img {
         display: block;
         border: 5px solid #ffffff; /* Adjust color as needed */
+        width: 90%;
+        height: auto;
         margin: 0;
         padding: 0;
     }
@@ -302,8 +324,13 @@ footer {
         z-index: 1;
     }
 
+    section {
+        font-size: 12px;
+    }
+
     .menu li {
         flex: 1;
+        font-size: 12px;
     }
 
     .menu li a {
