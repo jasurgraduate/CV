@@ -388,6 +388,7 @@ footer {
         border: 5px solid #ffffff; /* Adjust color as needed */
         margin: 0;
         padding: 0;
+        width: 30%;
     }
 
     .myimg img:hover {
