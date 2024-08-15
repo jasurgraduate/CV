@@ -84,13 +84,13 @@ body {
 }
 
 #submit-password:hover {
-    background-color: #45a049;
+    background-color: #4566a0;
     transform: translateY(-4px); /* More noticeable lift on hover */
     box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Add shadow on hover */
 }
 
 #submit-password:active {
-    transform: translateY(0); /* Reset lift on click */
+    transform: scale(0.9); /* Reset lift on click */
     box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* Reduce shadow on click */
 }
 

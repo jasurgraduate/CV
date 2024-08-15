@@ -120,9 +120,11 @@ header {
 
 .close:hover,
 .close:focus {
-    color: black;
+    color: rgb(25, 44, 169);
     text-decoration: none;
     cursor: pointer;
+    transition: ease-in-out 0.2s;
+    transform: scale(1.5);
 }
 
 #password-input {
@@ -144,9 +146,18 @@ header {
 }
 
 #submit-password:hover {
-    background-color: #45a049;
+    background-color: #2a59a0;
 }
 
+#submit-password:active{
+    transform: scale(0.9);
+}
+
+
+#modal-message {
+    color: red;
+    margin-top: 15px;
+}
 
 
 
