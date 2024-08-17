@@ -204,7 +204,7 @@ footer {
 
     /* Gallery Styles */
     .gallery {
-        width: 100%;
+        width: 90%;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -281,7 +281,7 @@ footer {
         justify-content: space-between;
         margin-top: -1rem;
         margin-bottom: 5rem;
-        padding: 3rem;
+        padding: 5rem;
     }
 
     .award {
