@@ -117,7 +117,69 @@ footer {
 }
 
 
+@keyframes cool-effect {
+  0% {
+      transform: scale(1) rotate(0deg);
+      background-color: #ced7e182; /* Starting background color */
+  }
+  25% {
+      transform: scale(1.2) rotate(15deg); /* Scale up and rotate */
+      background-color: #ffeb3b96; /* Change background color */
+  }
+  50% {
+      transform: scale(1) rotate(30deg); /* Scale back and rotate more */
+      background-color: #ff562292; /* Change background color */
+  }
+  75% {
+      transform: scale(1.2) rotate(45deg); /* Scale up and rotate further */
+      background-color: #4caf4fa5; /* Change background color */
+  }
+  100% {
+      transform: scale(1) rotate(0deg); /* Return to original state */
+      background-color: #ced7e100; /* Return to original background color */
+  }
+}
 
+.social-iconz {
+  animation: cool-effect 3s infinite; /* Apply the animation every 3 seconds */
+}
+
+.social-iconz:active {
+  transform: scale(0.7);
+}
+
+
+.social-iconz:hover {
+  transform: scale(1.5);
+  transition: ease-in-out 0.4s;
+}
+
+@keyframes coolz-effect {
+  0% {
+      transform: scale(1) rotate(0deg);
+      background-color: #ced7e100; /* Starting background color */
+  }
+  25% {
+      transform: scale(1) rotate(15deg); /* Scale up and rotate */
+      background-color: #ffeb3b96; /* Change background color */
+  }
+  50% {
+      transform: scale(1) rotate(30deg); /* Scale back and rotate more */
+      background-color: #ff562292; /* Change background color */
+  }
+  75% {
+      transform: scale(1) rotate(45deg); /* Scale up and rotate further */
+      background-color: #4caf4fa5; /* Change background color */
+  }
+  100% {
+      transform: scale(1) rotate(0deg); /* Return to original state */
+      background-color: #ced7e100; /* Return to original background color */
+  }
+}
+
+.iconz {
+  animation: coolz-effect 7s infinite; /* Apply the animation every 3 seconds */
+}
 
 /* || SMALL SCREEN --------------------------------------------------------------------------MOBILE*/
 @media screen and (min-width: 320px) {
@@ -707,7 +769,7 @@ footer {
 
 
   .profile-pic:hover {
-    transform: rotate(0deg) scale(1.1);
+    transform: rotate(0deg) scale(1.15);
     /* Enlarge the image on hover */
   }
 
