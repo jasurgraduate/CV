@@ -197,7 +197,7 @@ footer {
     /* Adjust height as needed */
     background-color: #f9c0c0;
     /* Futuristic teal color */
-    border-radius: 1rem;
+    border-radius: 10px;
     overflow: hidden;
   }
 
@@ -618,7 +618,7 @@ footer {
     /* Adjust height as needed */
     background-color: #f9c0c0;
     /* Futuristic teal color */
-    border-radius: 1rem;
+    border-radius: 10px;
     overflow: hidden;
   }
 
