@@ -131,26 +131,38 @@ header {
     width: calc(100% - 22px);
     /* Full width minus padding */
     padding: 10px;
-    margin: 10px 0;
+    margin: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
 
+
 #submit-password {
-    padding: 10px 20px;
+    margin-top: 15px;
+    padding: 12px 24px;
     background-color: #4CAF50;
     color: white;
+    max-width: 120px;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    font-size: 16px;
 }
 
 #submit-password:hover {
-    background-color: #2a59a0;
+    background-color: #4566a0;
+    transform: translateY(-4px);
+    /* More noticeable lift on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Add shadow on hover */
 }
 
 #submit-password:active {
     transform: scale(0.9);
+    /* Reset lift on click */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    /* Reduce shadow on click */
 }
 
 
