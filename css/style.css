@@ -70,7 +70,7 @@ footer {
   bottom: 0;
   left: 0;
   width: 100%;
-  background-color: #1e293b;
+  background: linear-gradient(135deg, #2c3e50, #34495e);
   color: whitesmoke;
   box-shadow: inset 0px 8px 10px -10px rgba(0, 0, 0, 0.8), 0px -8px 10px -10px rgba(0, 0, 0, 0.8);
 }
@@ -88,21 +88,21 @@ footer {
   }
 
   25% {
-    transform: scale(1.2) rotate(15deg);
+    transform: scale(1.2) rotate(0deg);
     /* Scale up and rotate */
-    background-color: #ffeb3b96;
+    background-color: #fef28996;
     /* Change background color */
   }
 
   50% {
-    transform: scale(1) rotate(30deg);
+    transform: scale(1) rotate(0deg);
     /* Scale back and rotate more */
-    background-color: #ff562292;
+    background-color: #62f5ff92;
     /* Change background color */
   }
 
   75% {
-    transform: scale(1.2) rotate(45deg);
+    transform: scale(1.2) rotate(0deg);
     /* Scale up and rotate further */
     background-color: #4caf4fa5;
     /* Change background color */
@@ -117,7 +117,7 @@ footer {
 }
 
 .social-iconz {
-  animation: cool-effect 3s infinite;
+  animation: cool-effect 5s infinite;
   /* Apply the animation every 3 seconds */
 }
 
@@ -173,7 +173,7 @@ footer {
     justify-content: center;
     align-items: center;
     width: 100%;
-    background-color: #1e293b;
+    background: linear-gradient(135deg, #2c3e50, #34495e);
     color: whitesmoke;
     font-size: 15px;
     padding: 10px;
@@ -599,7 +599,7 @@ footer {
     justify-content: center;
     align-items: center;
     width: 100%;
-    background-color: #1e293b;
+    background: linear-gradient(135deg, #2c3e50, #34495e);
     color: whitesmoke;
     font-size: 25px;
     padding: 25px;
