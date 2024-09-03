@@ -355,6 +355,18 @@ footer {
     margin-bottom: 1rem;
   }
 
+  @keyframes glow {
+    from {
+      box-shadow: 0 0 3rem rgb(120, 249, 217);
+      /* Initial shadow */
+    }
+
+    to {
+      box-shadow: 0 0 3rem rgb(30, 134, 225);
+      /* Glowing shadow */
+    }
+  }
+
   .profile-pic {
     transition: transform 0.3s ease-in-out;
     transform: rotate(0deg);
@@ -384,17 +396,15 @@ footer {
   }
 
   .profile-pic:nth-of-type(2) {
-
-    display: none;
     transition: transform 0.3s ease-in-out;
-    transform: rotate(-3deg);
-    /* Rotate the image by -20 degrees */
+    transform: rotate(0deg);
+    /* Rotate the image by 3 degrees */
     border-bottom-right-radius: 1rem;
     border-top-left-radius: 1rem;
-    width: 7rem;
-    height: 7rem;
+    width: 17rem;
+    height: 17rem;
     animation: glow 1.5s infinite alternate;
-    /* Glowing animation */
+    cursor: grab;
   }
 
   .profile-pic:nth-of-type(3) {
@@ -410,6 +420,13 @@ footer {
     /* Glowing animation */
   }
 
+  .profile-pic:nth-of-type(4) {
+    display: none;
+  }
+
+  .profile-pic:nth-of-type(5) {
+    display: none;
+  }
 
   .profile-pic:hover {
     transform: rotate(0deg);
@@ -460,17 +477,7 @@ footer {
     }
   }
 
-  @keyframes glow {
-    from {
-      box-shadow: 0 0 2rem rgb(211, 81, 244);
-      /* Initial shadow */
-    }
 
-    to {
-      box-shadow: 0 0 2rem rgb(30, 79, 225);
-      /* Glowing shadow */
-    }
-  }
 
   .typing.text {
     caret-color: rgb(181, 0, 160);
@@ -756,19 +763,61 @@ footer {
     max-width: 100%;
   }
 
-  .profile-pic {
-    display: grid;
-    padding: 0.1rem;
-    margin: 1rem;
+  @keyframes glow {
+    from {
+      box-shadow: 0 0 2rem rgb(249, 120, 240);
+      /* Initial shadow */
+    }
 
+    to {
+      box-shadow: 0 0 2rem rgb(30, 79, 225);
+      /* Glowing shadow */
+    }
+  }
+
+  @keyframes glow-blue {
+    from {
+      box-shadow: 0 0 2rem rgb(120, 249, 217);
+      /* Initial shadow */
+    }
+
+    to {
+      box-shadow: 0 0 2rem rgb(30, 134, 225);
+      /* Glowing shadow */
+    }
+  }
+
+  @keyframes glow-yell {
+    from {
+      box-shadow: 0 0 1rem rgb(170, 255, 137);
+      /* Initial shadow */
+    }
+
+    to {
+      box-shadow: 0 0 1rem rgb(30, 134, 225);
+      /* Glowing shadow */
+    }
+  }
+
+  @keyframes glow-pur {
+    from {
+      box-shadow: 0 0 1rem rgb(30, 134, 225);
+      /* Glowing shadow */
+    }
+
+    to {
+      box-shadow: 0 0 1rem rgb(55, 0, 90);
+      /* Initial shadow */
+    }
 
   }
 
-
   .profile-pic {
-    display: unset;
+    display: grid;
     list-style-type: none;
-    transition: transform 0.3s ease-in-out;
+    padding: 0.1rem;
+    margin: 1rem;
+    transition: transform 0.3s ease-out;
     transform: rotate(3deg);
     /* Rotate the image by -20 degrees */
     border-bottom-right-radius: 1rem;
@@ -784,14 +833,14 @@ footer {
 
   .profile-pic:nth-of-type(1) {
     display: unset;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-out;
     transform: rotate(-3deg);
     /* Rotate the image by -3 degrees */
     border-bottom-right-radius: 1rem;
     border-top-left-radius: 1rem;
-    width: 275px;
-    height: 275px;
-    animation: glow 1.5s infinite alternate;
+    width: 255px;
+    height: 255px;
+    animation: glow-pur 1.5s infinite alternate;
     /* Glowing animation */
     cursor: grab;
   }
@@ -805,8 +854,8 @@ footer {
     /* Rotate the image by -20 degrees */
     border-bottom-right-radius: 1rem;
     border-top-left-radius: 1rem;
-    width: 275px;
-    height: 275px;
+    width: 245px;
+    height: 245px;
     animation: glow 1.5s infinite alternate;
     /* Glowing animation */
     cursor: grab;
@@ -821,19 +870,47 @@ footer {
     /* Rotate the image by -20 degrees */
     border-bottom-right-radius: 1rem;
     border-top-left-radius: 1rem;
-    width: 295px;
-    height: 285px;
+    width: 255px;
+    height: 245px;
+    animation: glow-yell 1.5s infinite alternate;
+    /* Glowing animation */
+    cursor: grab;
+  }
+
+  .profile-pic:nth-of-type(4) {
+    display: unset;
+    transition: transform 0.3s ease-in-out;
+    transform: rotate(4deg);
+    /* Rotate the image by -20 degrees */
+    border-bottom-right-radius: 1rem;
+    border-top-left-radius: 1rem;
+    width: 255px;
+    height: 255px;
     animation: glow 1.5s infinite alternate;
     /* Glowing animation */
     cursor: grab;
   }
 
-
+  .profile-pic:nth-of-type(5) {
+    display: unset;
+    list-style-type: none;
+    transition: transform 0.3s ease-in-out;
+    transform: rotate(-3deg);
+    /* Rotate the image by -20 degrees */
+    border-bottom-right-radius: 1rem;
+    border-top-left-radius: 1rem;
+    width: 250px;
+    height: 250px;
+    animation: glow-blue 1.5s infinite alternate;
+    cursor: grab;
+    border: 0px solid white;
+    /* White border with 1 rem size */
+  }
 
 
   .profile-pic:hover {
-    transform: rotate(0deg) scale(1.15);
-    /* Enlarge the image on hover */
+    transform: rotate(0deg) scale(1.2);
+    z-index: 100;
   }
 
 
@@ -879,17 +956,7 @@ footer {
   }
 
 
-  @keyframes glow {
-    from {
-      box-shadow: 0 0 2rem rgb(249, 120, 240);
-      /* Initial shadow */
-    }
 
-    to {
-      box-shadow: 0 0 2rem rgb(30, 79, 225);
-      /* Glowing shadow */
-    }
-  }
 
 
   .btn {
