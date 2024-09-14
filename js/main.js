@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", function() {
-  const text = "Hello ツ\nWelcome to my personal website!\nHere you can see my personal projects and read my blogs :)";
+  const text = "Hello | 안녕하세요 ㅋㅋㅋ ツ\nWelcome to my personal website!\nHere you can see my personal projects and read my blogs :)";
 
   const styleMap = {
-    "Hello ツ": "hello",
+    "Hello | 안녕하세요 ㅋㅋㅋ ツ": "hello",
     "Welcome to my personal website!": "welcome",
     "Here you can see my personal projects and read my blogs :)": "projects"
   };
