@@ -8,33 +8,48 @@
 body {
     background: linear-gradient(185deg, #eef8f4, #f1e9e0);
     color: #333;
-    
+
 }
+
 /* Modal Styles */
 #password-modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgba(0,0,0,0.4); /* Black with opacity */
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black with opacity */
 }
 
 /* Modal fade-in animation */
 @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 .modal-content {
     background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
+    margin: 15% auto;
+    /* 15% from the top and centered */
     padding: 20px;
     border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
+    width: 80%;
+    /* Could be more or less, depending on screen size */
     max-width: 500px;
     border-radius: 10px;
     text-align: center;
@@ -42,8 +57,15 @@ body {
 
 /* Modal scale-in animation */
 @keyframes scaleIn {
-    from { transform: scale(0.8); opacity: 0; }
-    to { transform: scale(1); opacity: 1; }
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 
 .close {
@@ -58,17 +80,20 @@ body {
 .close:hover,
 .close:focus {
     color: #333;
-    transform: scale(1.2); /* Slightly enlarge on hover */
+    transform: scale(1.2);
+    /* Slightly enlarge on hover */
     text-decoration: none;
 }
 
 #password-input {
-    width: 100%; /* Full width */
+    width: 100%;
+    /* Full width */
     padding: 12px;
     margin: 12px 0;
     border: 2px solid #ccc;
     border-radius: 8px;
-    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    box-sizing: border-box;
+    /* Include padding and border in the element's total width and height */
     font-size: 16px;
 }
 
@@ -85,13 +110,17 @@ body {
 
 #submit-password:hover {
     background-color: #4566a0;
-    transform: translateY(-4px); /* More noticeable lift on hover */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Add shadow on hover */
+    transform: translateY(-4px);
+    /* More noticeable lift on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Add shadow on hover */
 }
 
 #submit-password:active {
-    transform: scale(0.9); /* Reset lift on click */
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* Reduce shadow on click */
+    transform: scale(0.9);
+    /* Reset lift on click */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    /* Reduce shadow on click */
 }
 
 /* Error message styling */
@@ -100,13 +129,19 @@ body {
     color: #d9534f;
     font-size: 16px;
     opacity: 0;
-    animation: fadeInMessage 0.3s ease-out forwards; /* Fade-in animation for error message */
+    animation: fadeInMessage 0.3s ease-out forwards;
+    /* Fade-in animation for error message */
 }
 
 /* Error message fade-in animation */
 @keyframes fadeInMessage {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 
@@ -119,7 +154,8 @@ header {
     line-height: 1.6;
 }
 
-header h1, header h2 {
+header h1,
+header h2 {
     text-align: center;
 }
 
@@ -212,7 +248,7 @@ main section li:hover {
     text-decoration: none;
     border-radius: 5px;
     transition: background 0.3s;
-    
+
 }
 
 .download-btn:hover {
@@ -220,7 +256,7 @@ main section li:hover {
     color: #1e293b;
     border-color: #333;
     animation: ease-in-out;
-    
+
 }
 
 footer {
@@ -245,12 +281,13 @@ footer {
         padding: 10px;
         line-height: 1.6;
     }
-    
-    header h1, header h2 {
+
+    header h1,
+    header h2 {
         text-align: center;
         font-size: 19px;
     }
-    
+
     .contact-info {
         text-align: center;
         margin-top: 10px;
@@ -265,15 +302,15 @@ footer {
         text-decoration: none;
         border-radius: 5px;
         transition: background 0.3s;
-        
+
     }
-    
+
     .download-btn:hover {
         background: #ffffff;
         color: #1e293b;
         border-color: #333;
         animation: ease-in-out;
-        
+
     }
 
     .myimg {
@@ -281,12 +318,13 @@ footer {
         display: flex;
         flex-direction: column;
         align-items: center;
-        
+
     }
-    
+
     .myimg img {
         display: block;
-        border: 5px solid #ffffff; /* Adjust color as needed */
+        border: 5px solid #ffffff;
+        /* Adjust color as needed */
         width: 90%;
         height: auto;
         margin: 0;
@@ -294,13 +332,13 @@ footer {
     }
 
     .myimg img:hover {
-
+        transition: ease-in-out 0.5s;
+        transform: scale(1.2);
         cursor: grab;
     }
-    
+
     .myimg img:active {
-        transition: ease-in-out 0.5s;
-        transform: scale(1.4);
+
         cursor: grabbing;
     }
 
@@ -334,7 +372,7 @@ footer {
     }
 
     .menu li a {
-        
+
         width: 100%;
         font-size: 0.6rem;
         padding: 1.8rem 0;
@@ -357,7 +395,7 @@ footer {
         background: linear-gradient(to right, #598dc7, #7fb0e1);
         color: white;
         transform: scale(1.0);
-      }
+    }
 }
 
 /* XL SCREEN ---------------------------------------------------------------------------------- LAPTOP */
@@ -369,8 +407,9 @@ footer {
         padding: 10px;
         line-height: 1.6;
     }
-    
-    header h1, header h2 {
+
+    header h1,
+    header h2 {
         text-align: center;
         font-size: 32px;
     }
@@ -380,25 +419,26 @@ footer {
         display: flex;
         flex-direction: column;
         align-items: center;
-        
+
     }
-    
+
     .myimg img {
         display: block;
-        border: 5px solid #ffffff; /* Adjust color as needed */
+        border: 5px solid #ffffff;
+        /* Adjust color as needed */
         margin: 0;
         padding: 0;
         width: 30%;
     }
 
     .myimg img:hover {
-
+        transition: ease-in-out 0.5s;
+        transform: scale(1.2);
         cursor: grab;
     }
-    
+
     .myimg img:active {
-        transition: ease-in-out 0.5s;
-        transform: scale(1.4);
+
         cursor: grabbing;
     }
 
