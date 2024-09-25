@@ -917,7 +917,7 @@ footer {
     animation: glow-blue 1.5s infinite alternate;
     cursor: grab;
     border: 0px solid white;
-    /* White border with 1 rem size */
+    /* White border with 1 rem size edit */
   }
 
   .profile-pic:nth-of-type(6) {
