@@ -847,7 +847,7 @@ footer {
   .profile-pic:nth-of-type(1) {
     display: unset;
     transition: transform 0.3s ease-out;
-    transform: rotate(3deg);
+    transform: rotate(-3deg);
     /* Rotate the image by -3 degrees */
     border-bottom-right-radius: 1rem;
     border-top-left-radius: 1rem;
