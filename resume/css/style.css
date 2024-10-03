@@ -11,6 +11,48 @@ body {
 
 }
 
+.image-container {
+    perspective: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Perspective for the 3D effect */
+}
+
+.image-flipper {
+    position: relative;
+    width: 350px;
+    /* Set the width of the image */
+    height: 350px;
+    /* Set the height of the image */
+    transition: transform 0.6s ease-in-out;
+    /* Smooth transition */
+    transform-style: preserve-3d;
+    /* Preserve the 3D effect */
+}
+
+.flipping-image {
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border: white solid 5px;
+    border-radius: 10px;
+    /* Hide the back face when flipped */
+}
+
+.flipping-image:hover {
+    cursor: pointer;
+}
+
+/* Flipped state */
+.image-flipper.flipped {
+    transform: rotateY(180deg);
+    /* Rotate the flipper */
+}
+
+
+
+
 /* Modal Styles */
 #password-modal {
     display: none;
@@ -236,13 +278,14 @@ main section li:hover {
 
 .download-section {
     text-align: center;
-    margin-bottom: 7rem;
+    margin-bottom: 3rem;
 }
 
 .download-btn {
     display: inline-block;
-    padding: 20px 80px;
-    font-size: 32px;
+    padding: 15px 40px;
+    font-size: 18px;
+    width: 250px;
     background-color: #1e293b;
     color: #ffffff;
     text-decoration: none;
@@ -259,12 +302,84 @@ main section li:hover {
 
 }
 
+.download-btn2 {
+    display: inline-block;
+    padding: 15px 40px;
+    font-size: 18px;
+    width: 250px;
+    background-color: #1e293b;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+
+}
+
+.download-btn2:hover {
+    background: #ffffff;
+    color: #1e293b;
+    border-color: #333;
+    animation: ease-in-out;
+
+}
+
 footer {
     background-color: #1e293b;
     color: #fff;
     text-align: center;
     padding: 1.5rem 0;
 }
+
+/* Updated Main container styling */
+
+
+.card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Front and back styling */
+.front,
+.back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 8px;
+    border: #ffffff solid 4px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.front img,
+.back img {
+    width: 100%;
+    height: 100%;
+}
+
+.back {
+    transform: rotateY(180deg);
+}
+
+/* Flip the card when the 'flipped' class is added */
+.flipped {
+    transform: rotateY(180deg);
+}
+
+.business-card .front {
+    filter: blur(2.5px);
+    /* Add subtle blur to the front */
+    transition: filter 0.6s ease-in-out;
+    /* Smooth transition for the blur */
+}
+
+.flipped .front {
+    filter: none;
+    /* Remove blur when the card is flipped */
+}
+
+
 
 @media (max-width: 768px) {
     .container {
@@ -288,30 +403,21 @@ footer {
         font-size: 19px;
     }
 
+    .business-card {
+        width: 350px;
+        height: 200px;
+        position: relative;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+        cursor: pointer;
+    }
+
     .contact-info {
         text-align: center;
         margin-top: 10px;
     }
 
-    .download-btn {
-        display: inline-block;
-        padding: 15px 40px;
-        font-size: 20px;
-        background-color: #1e293b;
-        color: #ffffff;
-        text-decoration: none;
-        border-radius: 5px;
-        transition: background 0.3s;
 
-    }
-
-    .download-btn:hover {
-        background: #ffffff;
-        color: #1e293b;
-        border-color: #333;
-        animation: ease-in-out;
-
-    }
 
     .myimg {
         margin: 0;
@@ -412,6 +518,15 @@ footer {
     header h2 {
         text-align: center;
         font-size: 32px;
+    }
+
+    .business-card {
+        width: 700px;
+        height: 400px;
+        position: relative;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+        cursor: pointer;
     }
 
     .myimg {
