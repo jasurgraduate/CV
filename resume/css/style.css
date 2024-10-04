@@ -406,8 +406,8 @@ footer {
     }
 
     .business-card {
-        width: 350px;
-        height: 200px;
+        width: 300px;
+        height: 170px;
         position: relative;
         transition: transform 0.6s;
         transform-style: preserve-3d;
