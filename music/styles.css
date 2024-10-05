@@ -1,160 +1,94 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #0a0f1f, #1c1e28);
     margin: 0;
-    padding: 20px;
+    padding: 0;
+    color: white;
 }
 
 .container {
     max-width: 800px;
-    margin: 0 auto;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    margin: auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
 h1 {
-    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.input-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
 }
 
 input[type="text"] {
+    flex: 1;
     padding: 10px;
-    width: 70%;
+    border: none;
+    border-radius: 4px;
     margin-right: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
 }
 
 button {
     padding: 10px 15px;
     border: none;
-    border-radius: 5px;
-    background-color: #4CAF50;
-    /* Green */
+    background-color: #28a745;
     color: white;
+    border-radius: 4px;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: #218838;
 }
 
-.video-container {
-
+#videoPlayerContainer {
     position: relative;
-    /* Positioning context for the iframe */
-    width: 50%;
-    /* Full width */
-    padding-top: 28.25%;
-    /* 16:9 Aspect Ratio (9/16 * 100) */
-    border-radius: 10px;
-    /* Curved edges */
-    overflow: hidden;
-    /* Hide overflow */
-    margin: 20px 0;
-    /* Space around video */
+    padding-top: 56.25%;
+    /* 16:9 Aspect Ratio */
 }
 
-.video-container iframe {
+#videoPlayer {
     position: absolute;
-    /* Position absolutely within the container */
     top: 0;
-    /* Align to top */
     left: 0;
-    /* Align to left */
     width: 100%;
-    /* Make the video responsive */
     height: 100%;
-    /* Fill the container */
-    border-radius: 10px;
-    /* Curved edges for iframe */
 }
 
-.song-list {
+ul {
     list-style-type: none;
     padding: 0;
 }
 
-.song-list li {
-    padding: 10px;
-    background-color: #fff;
-    margin: 5px 0;
-    border-radius: 5px;
+li {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+    transition: background 0.3s;
 }
 
-.song-list li:hover {
-    background-color: #f0f0f0;
+li:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.completed {
+    text-decoration: line-through;
+    color: gray;
 }
 
 .icon {
     cursor: pointer;
     margin-left: 10px;
-}
-
-/* Modal styles */
-.modal {
-    display: none;
-    /* Hidden by default */
-    position: fixed;
-    /* Stay in place */
-    z-index: 1;
-    /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%;
-    /* Full width */
-    height: 100%;
-    /* Full height */
-    overflow: auto;
-    /* Enable scroll if needed */
-    background-color: rgb(0, 0, 0);
-    /* Fallback color */
-    background-color: rgba(0, 0, 0, 0.4);
-    /* Black w/ opacity */
-}
-
-.modal-content {
-    background-color: #fefefe;
-    margin: 15% auto;
-    /* 15% from the top and centered */
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    /* Could be more or less, depending on screen size */
-    border-radius: 10px;
-    /* Rounded corners */
-}
-
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-button {
-    background-color: #4CAF50;
-    /* Green */
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    /* Rounded corners */
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #45a049;
+    color: #dc3545;
 }

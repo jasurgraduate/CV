@@ -4,35 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Video Music Player</title>
+    <title>YouTube Video Player</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
     <div class="container">
-        <h1>Video Music Player</h1>
-
-
-        <!-- Video Player with Curved Edges -->
-        <div class="video-container">
-            <iframe id="videoPlayer" frameborder="0" allowfullscreen></iframe>
+        <h1>YouTube Video Player</h1>
+        <div class="input-container">
+            <input type="text" id="videoLink" placeholder="YouTube Video Link...">
+            <input type="text" id="videoName" placeholder="Video Name...">
+            <button id="addVideoBtn">Add Video</button>
         </div>
-        <input type="text" id="youtubeLink" placeholder="Enter YouTube Video Link">
-        <button id="addSongBtn">Add Song</button>
-        <!-- Song List -->
-        <ul id="songList" class="song-list" ondrop="drop(event)" ondragover="allowDrop(event)"></ul>
-    </div>
-
-    <!-- Modal for editing song name -->
-    <div id="editModal" class="modal">
-        <div class="modal-content">
-            <span class="close" id="closeModal">&times;</span>
-            <h2>Edit Song Name</h2>
-            <input type="text" id="newSongName" placeholder="Enter new song name">
-            <button id="saveSongBtn">Save</button>
+        <div id="videoPlayerContainer">
+            <iframe id="videoPlayer" src="" frameborder="0" allowfullscreen></iframe>
         </div>
+        <ul id="videoList"></ul>
     </div>
-
     <script src="script.js"></script>
 </body>
 
