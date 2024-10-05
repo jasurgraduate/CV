@@ -1,4 +1,6 @@
 let videosArray = [];
+let draggedItem = null;
+const helperLine = document.getElementById('helperLine');
 
 document.addEventListener('DOMContentLoaded', loadVideosFromLocalStorage);
 document.getElementById('addVideoBtn').addEventListener('click', addVideo);
@@ -42,6 +44,26 @@ function loadVideosFromLocalStorage() {
 
 function createVideoListItem(video) {
     const li = document.createElement('li');
+    li.setAttribute('draggable', true);
+    li.ondragstart = () => {
+        draggedItem = video.id;
+        helperLine.style.display = 'block';
+    };
+    li.ondragend = () => {
+        helperLine.style.display = 'none';
+        draggedItem = null;
+    };
+    li.ondragover = (event) => {
+        event.preventDefault();
+        showHelperLine(li);
+    };
+    li.ondrop = (event) => {
+        event.preventDefault();
+        const targetId = video.id;
+        swapVideos(draggedItem, targetId);
+        helperLine.style.display = 'none';
+    };
+
     li.innerHTML = `
         <span>${video.title}</span>
         <div>
@@ -51,6 +73,23 @@ function createVideoListItem(video) {
         </div>
     `;
     return li;
+}
+
+function showHelperLine(target) {
+    const rect = target.getBoundingClientRect();
+    helperLine.style.top = rect.top + window.scrollY + 'px';
+}
+
+function swapVideos(draggedId, targetId) {
+    const draggedIndex = videosArray.findIndex(video => video.id == draggedId);
+    const targetIndex = videosArray.findIndex(video => video.id == targetId);
+
+    if (draggedIndex !== -1 && targetIndex !== -1) {
+        const [removed] = videosArray.splice(draggedIndex, 1); // Remove dragged video
+        videosArray.splice(targetIndex, 0, removed); // Insert it at target position
+        saveToLocalStorage(videosArray);
+        loadVideosFromLocalStorage();
+    }
 }
 
 function playVideo(videoId) {
