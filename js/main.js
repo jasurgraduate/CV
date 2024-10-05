@@ -1,9 +1,9 @@
-document.addEventListener("DOMContentLoaded", function() {
-  const text = "Hello | 안녕하세요 ㅋㅋㅋ ツ\nWelcome to my personal website!\nHere you can see my personal projects and read my blogs :)";
+document.addEventListener("DOMContentLoaded", function () {
+  const text = "Hello | 안녕하세요 ㅋㅋㅋ ツ\nWelcome!\nHere you can see my personal projects and read my blogs :)";
 
   const styleMap = {
     "Hello | 안녕하세요 ㅋㅋㅋ ツ": "hello",
-    "Welcome to my personal website!": "welcome",
+    "Welcome!": "welcome",
     "Here you can see my personal projects and read my blogs :)": "projects"
   };
 
@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 
   // Event listener for key presses
-  document.addEventListener('keydown', function(event) {
+  document.addEventListener('keydown', function (event) {
     if (event.key === '7') {
       sevenCount++;
       if (sevenCount === 3) {
