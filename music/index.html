@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Music Player</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Video Music Player</h1>
+        <input type="text" id="youtubeLink" placeholder="Enter YouTube Video Link">
+        <button id="addSongBtn">Add Song</button>
+
+        <!-- Video Player with Curved Edges -->
+        <div class="video-container">
+            <iframe id="videoPlayer" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <!-- Song List -->
+        <ul id="songList" class="song-list" ondrop="drop(event)" ondragover="allowDrop(event)"></ul>
+    </div>
+
+    <!-- Modal for editing song name -->
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <h2>Edit Song Name</h2>
+            <input type="text" id="newSongName" placeholder="Enter new song name">
+            <button id="saveSongBtn">Save</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
