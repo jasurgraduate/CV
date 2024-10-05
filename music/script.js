@@ -1,4 +1,5 @@
 let currentEditingVideoId = null; // Variable to keep track of which song is being edited
+let currentlyPlayingVideoId = null; // Variable to keep track of the currently playing video
 
 document.addEventListener('DOMContentLoaded', loadSongsFromLocalStorage);
 
@@ -31,6 +32,7 @@ function extractVideoID(url) {
 function playSong(videoId) {
     const player = document.getElementById('videoPlayer');
     player.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+    currentlyPlayingVideoId = videoId; // Store the currently playing video ID
 }
 
 function createSongListItem(videoId, title) {
@@ -70,34 +72,12 @@ function closeModal() {
     document.getElementById('editModal').style.display = 'none'; // Hide the modal
 }
 
-function allowDrop(event) {
-    event.preventDefault();
-}
-
-function dragStart(event) {
-    event.target.classList.add('dragging');
-    event.dataTransfer.setData('text/plain', event.target.dataset.id);
-}
-
-function dragEnd(event) {
-    event.target.classList.remove('dragging');
-}
-
-function drop(event) {
-    event.preventDefault();
-    const draggingId = event.dataTransfer.getData('text/plain');
-    const draggingLi = document.querySelector(`li[data-id='${draggingId}']`);
-    const dropzone = event.target;
-
-    if (dropzone.tagName === 'UL') {
-        dropzone.appendChild(draggingLi);
-        saveSongList(); // Save the updated list to local storage
-    }
-}
-
 function deleteSong(element) {
     const songItem = element.closest('li');
-    removeFromLocalStorage(songItem.dataset.id); // Remove from local storage
+    const videoId = songItem.dataset.id;
+
+    // Remove from local storage and song list without stopping the video
+    removeFromLocalStorage(videoId); // Remove from local storage
     songItem.remove(); // Remove the song from the list
 }
 
@@ -132,6 +112,31 @@ function removeFromLocalStorage(videoId) {
 function getSongsFromLocalStorage() {
     const songs = localStorage.getItem('songs');
     return songs ? JSON.parse(songs) : {}; // Return parsed object or empty object if null
+}
+
+function dragStart(event) {
+    event.target.classList.add('dragging');
+    event.dataTransfer.setData('text/plain', event.target.dataset.id);
+}
+
+function dragEnd(event) {
+    event.target.classList.remove('dragging');
+}
+
+function allowDrop(event) {
+    event.preventDefault();
+}
+
+function drop(event) {
+    event.preventDefault();
+    const draggingId = event.dataTransfer.getData('text/plain');
+    const draggingLi = document.querySelector(`li[data-id='${draggingId}']`);
+    const dropzone = event.target;
+
+    if (dropzone.tagName === 'UL') {
+        dropzone.appendChild(draggingLi);
+        saveSongList(); // Save the updated list to local storage
+    }
 }
 
 // To save the song list when it's reordered

@@ -11,14 +11,14 @@
 <body>
     <div class="container">
         <h1>Video Music Player</h1>
-        <input type="text" id="youtubeLink" placeholder="Enter YouTube Video Link">
-        <button id="addSongBtn">Add Song</button>
+
 
         <!-- Video Player with Curved Edges -->
         <div class="video-container">
             <iframe id="videoPlayer" frameborder="0" allowfullscreen></iframe>
         </div>
-
+        <input type="text" id="youtubeLink" placeholder="Enter YouTube Video Link">
+        <button id="addSongBtn">Add Song</button>
         <!-- Song List -->
         <ul id="songList" class="song-list" ondrop="drop(event)" ondragover="allowDrop(event)"></ul>
     </div>
