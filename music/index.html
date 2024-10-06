@@ -11,14 +11,19 @@
 <body>
     <div class="container">
         <h1>YouTube Video Player</h1>
+
+        <div class="videocontainer">
+            <div id="videoPlayerContainer">
+                <iframe id="videoPlayer" src="" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+
         <div class="input-container">
             <input type="text" id="videoLink" placeholder="YouTube Video Link...">
             <input type="text" id="videoName" placeholder="Video Name...">
             <button id="addVideoBtn">Add Video</button>
         </div>
-        <div id="videoPlayerContainer">
-            <iframe id="videoPlayer" src="" frameborder="0" allowfullscreen></iframe>
-        </div>
+
         <ul id="videoList" ondragover="allowDrop(event)"></ul>
         <div class="helper-line" id="helperLine"></div>
     </div>
